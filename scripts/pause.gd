@@ -12,6 +12,9 @@ var _sfx_bus: int = AudioServer.get_bus_index("SFX")
 @onready var music_slider: HSlider = %MusicSlider
 @onready var sfx_value: Label = %SFXValue
 @onready var sfx_slider: HSlider = %SFXSlider
+@onready var one_x_check_box: CheckBox = %OneXCheckBox
+@onready var two_x_check_box: CheckBox = %TwoXCheckBox
+@onready var fullscreen_check_box: CheckBox = %FullscreenCheckBox
 
 
 func _input(event: InputEvent) -> void:
@@ -21,6 +24,37 @@ func _input(event: InputEvent) -> void:
 
 func focus_main_menu() -> void:
 	new_game_button.grab_focus()
+
+
+func load_settings() -> void:
+	_on_music_slider_value_changed(Global.settings.music_volume)
+	_on_sfx_slider_value_changed(Global.settings.sfx_volume)
+	_resize_screen(Global.settings.window_scale)
+	
+	music_slider.value = Global.settings.music_volume
+	sfx_slider.value = Global.settings.sfx_volume
+	
+	if Global.settings.window_scale == Global.Mode.WINDOW_ONE:
+		one_x_check_box.button_pressed = true
+	elif Global.settings.window_scale == Global.Mode.WINDOW_TWO:
+		two_x_check_box.button_pressed = true
+	else:
+		fullscreen_check_box.button_pressed = true
+
+
+func _save_settings() -> void:
+	var music_volume: float = music_slider.value
+	var sfx_volume: float = sfx_slider.value
+	var window_scale: int
+	
+	if one_x_check_box.button_pressed:
+		window_scale = Global.Mode.WINDOW_ONE
+	elif two_x_check_box.button_pressed:
+		window_scale = Global.Mode.WINDOW_TWO
+	else:
+		window_scale = Global.Mode.FULLSCREEN
+
+	Global.save_settings(music_volume, sfx_volume, window_scale)
 
 
 func _on_settings_button_pressed() -> void:
@@ -34,6 +68,7 @@ func _on_quit_button_pressed() -> void:
 
 
 func _on_close_button_pressed() -> void:
+	_save_settings()
 	settings_panel.hide()
 	settings_button.grab_focus()
 

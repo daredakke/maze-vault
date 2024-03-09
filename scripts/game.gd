@@ -9,6 +9,7 @@ extends Node2D
 func _ready() -> void:
 	splash.splash_ended.connect(pause.focus_main_menu)
 	
+	pause.load_settings()
 	_pause_game()
 
 

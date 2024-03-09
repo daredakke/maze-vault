@@ -206,6 +206,7 @@ mouse_filter = 2
 theme_override_constants/separation = 20
 
 [node name="OneXCheckBox" type="CheckBox" parent="SettingsPanel/Margin/ControlsVBox/WindowScaleVBox/ButtonsHBox"]
+unique_name_in_owner = true
 layout_mode = 2
 focus_neighbor_left = NodePath("../../../VolumeHBox/SFXVBox/SFXSlider")
 focus_neighbor_top = NodePath("../../../VolumeHBox/SFXVBox/SFXSlider")
@@ -219,6 +220,7 @@ button_group = SubResource("ButtonGroup_4g441")
 text = "1X"
 
 [node name="TwoXCheckBox" type="CheckBox" parent="SettingsPanel/Margin/ControlsVBox/WindowScaleVBox/ButtonsHBox"]
+unique_name_in_owner = true
 layout_mode = 2
 focus_neighbor_left = NodePath("../OneXCheckBox")
 focus_neighbor_top = NodePath("../OneXCheckBox")
@@ -231,6 +233,7 @@ button_group = SubResource("ButtonGroup_4g441")
 text = "2X"
 
 [node name="FullscreenCheckBox" type="CheckBox" parent="SettingsPanel/Margin/ControlsVBox/WindowScaleVBox/ButtonsHBox"]
+unique_name_in_owner = true
 layout_mode = 2
 focus_neighbor_left = NodePath("../TwoXCheckBox")
 focus_neighbor_top = NodePath("../TwoXCheckBox")
