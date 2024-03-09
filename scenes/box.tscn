@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://dop7wr7kmcvdl"]
+
+[ext_resource type="Script" path="res://scripts/box.gd" id="1_2e5mo"]
+[ext_resource type="Texture2D" uid="uid://cvtdjtmyenki0" path="res://assets/square-white-16.png" id="1_eldo2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fydvt"]
+
+[node name="Box" type="Area2D" groups=["moveable", "obstacle"]]
+script = ExtResource("1_2e5mo")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.27451, 0.211765, 0.129412, 1)
+texture = ExtResource("1_eldo2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(0.8, 0.8)
+shape = SubResource("RectangleShape2D_fydvt")
+
+[node name="CollisionRay" type="RayCast2D" parent="."]

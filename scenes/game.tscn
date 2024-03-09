@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://2ebxoees0r32"]
+[gd_scene load_steps=10 format=3 uid="uid://2ebxoees0r32"]
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_f6l8u"]
 [ext_resource type="PackedScene" uid="uid://ccqqq3oltseh7" path="res://scenes/splash.tscn" id="2_3wpsm"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://q64fopn2ht18" path="res://assets/tiled-grid.png" id="5_d5hoy"]
 [ext_resource type="PackedScene" uid="uid://ciaf6xdrrx2v4" path="res://scenes/player.tscn" id="7_wynie"]
 [ext_resource type="PackedScene" uid="uid://c2uip3188o5lx" path="res://scenes/robot.tscn" id="8_30d8c"]
+[ext_resource type="PackedScene" uid="uid://dop7wr7kmcvdl" path="res://scenes/box.tscn" id="9_6vkcy"]
 
 [node name="Game" type="Node2D"]
 process_mode = 3
@@ -68,7 +69,7 @@ position = Vector2(176, 128)
 scale = Vector2(5, 1)
 
 [node name="Wall6" parent="Level/LevelTest/Walls" instance=ExtResource("5_b62s1")]
-position = Vector2(208, 80)
+position = Vector2(80, 112)
 scale = Vector2(5, 1)
 
 [node name="Wall9" parent="Level/LevelTest/Walls" instance=ExtResource("5_b62s1")]
@@ -93,3 +94,8 @@ position = Vector2(80, 80)
 
 [node name="Robot" parent="Level/LevelTest/Entities" instance=ExtResource("8_30d8c")]
 position = Vector2(160, 48)
+
+[node name="Boxes" type="Node2D" parent="Level/LevelTest"]
+
+[node name="Box" parent="Level/LevelTest/Boxes" instance=ExtResource("9_6vkcy")]
+position = Vector2(32, 64)
