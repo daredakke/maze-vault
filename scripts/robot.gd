@@ -7,6 +7,7 @@ extends Entity
 var is_controlled: bool = false
 var _collider = null
 var _count: int = 1
+var _moving_to_target: bool = false
 var _last_player_direction: Vector2
 var _steps_to_move: int = 0
 
@@ -33,28 +34,32 @@ func _look_for_player() -> void:
 	if is_controlled:
 		return
 	
-	for dir in directions:
-		while true:
-			player_ray.target_position = directions[dir] * (GRID_SIZE * _count)
-			player_ray.force_raycast_update()
-			
-			_collider = player_ray.get_collider()
-			_count += 1
-			
-			if not _collider:
-				continue
+	if _moving_to_target:
+		if _steps_to_move > 0:
+			position += _last_player_direction * GRID_SIZE
+			_steps_to_move -= 1
+		else:
+			_moving_to_target = false
+	else:
+		for dir in directions:
+			while true:
+				player_ray.target_position = directions[dir] * (GRID_SIZE * _count)
+				player_ray.force_raycast_update()
 				
-			if _collider.is_in_group("wall"):
-				_count = 1
-				break
-			
-			if _collider.is_in_group("player"):
-				_steps_to_move = _count - 2
-				_count = 1
-				_last_player_direction = directions[dir]
-				position += _last_player_direction * GRID_SIZE
-				return
-	
-	if _steps_to_move > 0:
-		position += _last_player_direction * GRID_SIZE
-		_steps_to_move -= 1
+				_collider = player_ray.get_collider()
+				_count += 1
+				
+				if not _collider:
+					continue
+					
+				if _collider.is_in_group("obstacle"):
+					_count = 1
+					break
+				
+				if _collider.is_in_group("player"):
+					_steps_to_move = _count - 2
+					_count = 1
+					_last_player_direction = directions[dir]
+					position += _last_player_direction * GRID_SIZE
+					_moving_to_target = true
+					return
