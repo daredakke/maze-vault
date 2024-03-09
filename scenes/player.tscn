@@ -5,9 +5,10 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wp5ws"]
 
-[node name="Player" type="Area2D" node_paths=PackedStringArray("raycast")]
+[node name="Player" type="Area2D" node_paths=PackedStringArray("collision_ray") groups=["player"]]
 script = ExtResource("1_sidmr")
-raycast = NodePath("RayCast2D")
+is_player = true
+collision_ray = NodePath("CollisionRay")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 modulate = Color(0.160784, 0.701961, 0.180392, 1)
@@ -17,4 +18,6 @@ texture = ExtResource("2_e53mk")
 scale = Vector2(0.8, 0.8)
 shape = SubResource("RectangleShape2D_wp5ws")
 
-[node name="RayCast2D" type="RayCast2D" parent="."]
+[node name="CollisionRay" type="RayCast2D" parent="."]
+target_position = Vector2(0, 0)
+collide_with_areas = true
