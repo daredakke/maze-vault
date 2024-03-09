@@ -16,11 +16,16 @@ func _ready() -> void:
 
 
 func _process(_delta: float) -> void:
-	if not Global.game_started:
+	if not Global.game_started or Global.game_paused:
 		return
 	
-	if Input.is_action_just_pressed("pause") and not Global.game_paused:
+	if Input.is_action_just_pressed("pause"):
 		_pause_game()
+		return
+	
+	if Input.is_action_just_pressed("reset"):
+		EventBus.level_reset.emit()
+		return
 
 
 func _start_game() -> void:

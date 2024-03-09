@@ -5,9 +5,10 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dixpw"]
 
-[node name="Robot" type="Area2D" node_paths=PackedStringArray("player_ray", "collision_ray")]
+[node name="Robot" type="Area2D" node_paths=PackedStringArray("player_ray", "collision_box", "collision_ray")]
 script = ExtResource("1_27bsu")
 player_ray = NodePath("PlayerRay")
+collision_box = NodePath("CollisionShape2D")
 collision_ray = NodePath("CollisionRay")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

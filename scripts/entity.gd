@@ -5,6 +5,7 @@ extends Area2D
 const GRID_SIZE: int = 16
 
 @export var is_player: bool = false
+@export var collision_box: CollisionShape2D
 @export var collision_ray: RayCast2D
 
 var directions: Dictionary = {
@@ -13,6 +14,15 @@ var directions: Dictionary = {
 	"left": Vector2.LEFT,
 	"up": Vector2.UP,
 }
+
+var _is_active: bool = true
+var _starting_position: Vector2
+
+
+func _ready() -> void:
+	EventBus.level_reset.connect(reset)
+	
+	_starting_position = global_position
 
 
 func _process(_delta: float) -> void:
@@ -23,6 +33,12 @@ func _process(_delta: float) -> void:
 				EventBus.player_moved.emit()
 			else:
 				call_deferred("_move", directions[dir])
+
+
+func reset() -> void:
+	global_position = _starting_position
+	_is_active = true
+	collision_box.disabled = false
 
 
 func _move(dir: Vector2) -> void:
