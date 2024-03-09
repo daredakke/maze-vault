@@ -1,0 +1,57 @@
+[gd_resource type="Theme" load_steps=11 format=3 uid="uid://cvqshv3af3mlx"]
+
+[ext_resource type="FontFile" uid="uid://5jqrc3ni8x71" path="res://assets/fonts/SpaceMono-Bold.ttf" id="1_4k2ef"]
+[ext_resource type="FontFile" uid="uid://cikqe35cyxn17" path="res://assets/fonts/SpaceMono-Regular.ttf" id="1_4lvjy"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0newl"]
+content_margin_left = 8.0
+content_margin_right = 8.0
+bg_color = Color(0.2, 0.2, 0.2, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ojn5f"]
+content_margin_left = 8.0
+content_margin_right = 8.0
+bg_color = Color(0.0705882, 0.0705882, 0.0705882, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4kogc"]
+content_margin_left = 8.0
+content_margin_right = 8.0
+bg_color = Color(0.666667, 0.666667, 0.666667, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o5b4t"]
+content_margin_left = 8.0
+content_margin_right = 8.0
+bg_color = Color(0.2, 0.2, 0.2, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mpr4y"]
+content_margin_left = 8.0
+content_margin_right = 8.0
+bg_color = Color(0.2, 0.2, 0.2, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2p2vy"]
+content_margin_left = 8.0
+content_margin_right = 8.0
+bg_color = Color(0.0705882, 0.0705882, 0.0705882, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7wfqa"]
+content_margin_left = 8.0
+content_margin_right = 8.0
+bg_color = Color(0.666667, 0.666667, 0.666667, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_giodh"]
+bg_color = Color(0, 0, 0, 1)
+
+[resource]
+Button/colors/font_pressed_color = Color(0, 0, 0, 1)
+Button/font_sizes/font_size = 14
+Button/fonts/font = ExtResource("1_4k2ef")
+Button/styles/hover = SubResource("StyleBoxFlat_0newl")
+Button/styles/normal = SubResource("StyleBoxFlat_ojn5f")
+Button/styles/pressed = SubResource("StyleBoxFlat_4kogc")
+CheckBox/styles/hover = SubResource("StyleBoxFlat_o5b4t")
+CheckBox/styles/hover_pressed = SubResource("StyleBoxFlat_mpr4y")
+CheckBox/styles/normal = SubResource("StyleBoxFlat_2p2vy")
+CheckBox/styles/pressed = SubResource("StyleBoxFlat_7wfqa")
+Label/font_sizes/font_size = 14
+Label/fonts/font = ExtResource("1_4lvjy")
+Panel/styles/panel = SubResource("StyleBoxFlat_giodh")

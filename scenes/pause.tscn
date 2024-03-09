@@ -1,0 +1,263 @@
+[gd_scene load_steps=5 format=3 uid="uid://dhcf22jtoctn0"]
+
+[ext_resource type="Theme" uid="uid://cvqshv3af3mlx" path="res://resources/custom.tres" id="1_bcmi5"]
+[ext_resource type="FontFile" uid="uid://5jqrc3ni8x71" path="res://assets/fonts/SpaceMono-Bold.ttf" id="2_8t8k5"]
+[ext_resource type="Script" path="res://scripts/pause.gd" id="2_n0ita"]
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_4g441"]
+
+[node name="Pause" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("1_bcmi5")
+script = ExtResource("2_n0ita")
+
+[node name="MainPanel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="Margin" type="MarginContainer" parent="MainPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 16
+
+[node name="TitleLabel" type="Label" parent="MainPanel/Margin"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("2_8t8k5")
+theme_override_font_sizes/font_size = 30
+text = "MAZE VAULT"
+horizontal_alignment = 1
+
+[node name="ButtonsVBox" type="VBoxContainer" parent="MainPanel/Margin"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+mouse_filter = 2
+
+[node name="NewGameButton" type="Button" parent="MainPanel/Margin/ButtonsVBox"]
+unique_name_in_owner = true
+layout_mode = 2
+focus_neighbor_top = NodePath("../QuitButton")
+focus_neighbor_bottom = NodePath("../SettingsButton")
+focus_next = NodePath("../SettingsButton")
+focus_previous = NodePath("../QuitButton")
+mouse_default_cursor_shape = 2
+text = "NEW GAME"
+
+[node name="SettingsButton" type="Button" parent="MainPanel/Margin/ButtonsVBox"]
+unique_name_in_owner = true
+layout_mode = 2
+focus_neighbor_top = NodePath("../NewGameButton")
+focus_neighbor_bottom = NodePath("../QuitButton")
+focus_next = NodePath("../QuitButton")
+focus_previous = NodePath("../NewGameButton")
+mouse_default_cursor_shape = 2
+text = "SETTINGS"
+
+[node name="QuitButton" type="Button" parent="MainPanel/Margin/ButtonsVBox"]
+layout_mode = 2
+focus_neighbor_top = NodePath("../SettingsButton")
+focus_neighbor_bottom = NodePath("../NewGameButton")
+focus_next = NodePath("../NewGameButton")
+focus_previous = NodePath("../SettingsButton")
+mouse_default_cursor_shape = 2
+text = "QUIT"
+
+[node name="SettingsPanel" type="Panel" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Margin" type="MarginContainer" parent="SettingsPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 6
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 16
+
+[node name="SettingsLabel" type="Label" parent="SettingsPanel/Margin"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("2_8t8k5")
+theme_override_font_sizes/font_size = 20
+text = "SETTINGS"
+horizontal_alignment = 1
+
+[node name="ControlsVBox" type="VBoxContainer" parent="SettingsPanel/Margin"]
+layout_mode = 2
+size_flags_vertical = 4
+mouse_filter = 2
+
+[node name="VolumeHBox" type="HBoxContainer" parent="SettingsPanel/Margin/ControlsVBox"]
+layout_mode = 2
+size_flags_vertical = 6
+mouse_filter = 2
+theme_override_constants/separation = 20
+
+[node name="MusicVBox" type="VBoxContainer" parent="SettingsPanel/Margin/ControlsVBox/VolumeHBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+theme_override_constants/separation = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="SettingsPanel/Margin/ControlsVBox/VolumeHBox/MusicVBox"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 10
+
+[node name="MusicLabel" type="Label" parent="SettingsPanel/Margin/ControlsVBox/VolumeHBox/MusicVBox/HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_8t8k5")
+text = "MUSIC"
+
+[node name="MusicValue" type="Label" parent="SettingsPanel/Margin/ControlsVBox/VolumeHBox/MusicVBox/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "100%"
+
+[node name="MusicSlider" type="HSlider" parent="SettingsPanel/Margin/ControlsVBox/VolumeHBox/MusicVBox"]
+unique_name_in_owner = true
+layout_mode = 2
+focus_neighbor_top = NodePath("../../../../CloseButton")
+focus_neighbor_bottom = NodePath("../../SFXVBox/SFXSlider")
+focus_next = NodePath("../../SFXVBox/SFXSlider")
+focus_previous = NodePath("../../../../CloseButton")
+mouse_default_cursor_shape = 2
+max_value = 1.0
+step = 0.05
+value = 1.0
+
+[node name="SFXVBox" type="VBoxContainer" parent="SettingsPanel/Margin/ControlsVBox/VolumeHBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+theme_override_constants/separation = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="SettingsPanel/Margin/ControlsVBox/VolumeHBox/SFXVBox"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 10
+
+[node name="SFXLabel" type="Label" parent="SettingsPanel/Margin/ControlsVBox/VolumeHBox/SFXVBox/HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_8t8k5")
+text = "SFX"
+
+[node name="SFXValue" type="Label" parent="SettingsPanel/Margin/ControlsVBox/VolumeHBox/SFXVBox/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "100%"
+
+[node name="SFXSlider" type="HSlider" parent="SettingsPanel/Margin/ControlsVBox/VolumeHBox/SFXVBox"]
+unique_name_in_owner = true
+layout_mode = 2
+focus_neighbor_top = NodePath("../../MusicVBox/MusicSlider")
+focus_neighbor_bottom = NodePath("../../../WindowScaleVBox/ButtonsHBox/OneXCheckBox")
+focus_next = NodePath("../../../WindowScaleVBox/ButtonsHBox/OneXCheckBox")
+focus_previous = NodePath("../../MusicVBox/MusicSlider")
+mouse_default_cursor_shape = 2
+max_value = 1.0
+step = 0.05
+value = 1.0
+
+[node name="WindowScaleVBox" type="VBoxContainer" parent="SettingsPanel/Margin/ControlsVBox"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="WindowScaleLabel" type="Label" parent="SettingsPanel/Margin/ControlsVBox/WindowScaleVBox"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_8t8k5")
+text = "WINDOW SCALE"
+
+[node name="ButtonsHBox" type="HBoxContainer" parent="SettingsPanel/Margin/ControlsVBox/WindowScaleVBox"]
+layout_mode = 2
+size_flags_horizontal = 4
+mouse_filter = 2
+theme_override_constants/separation = 20
+
+[node name="OneXCheckBox" type="CheckBox" parent="SettingsPanel/Margin/ControlsVBox/WindowScaleVBox/ButtonsHBox"]
+layout_mode = 2
+focus_neighbor_left = NodePath("../../../VolumeHBox/SFXVBox/SFXSlider")
+focus_neighbor_top = NodePath("../../../VolumeHBox/SFXVBox/SFXSlider")
+focus_neighbor_right = NodePath("../TwoXCheckBox")
+focus_neighbor_bottom = NodePath("../TwoXCheckBox")
+focus_next = NodePath("../TwoXCheckBox")
+focus_previous = NodePath("../../../VolumeHBox/SFXVBox/SFXSlider")
+mouse_default_cursor_shape = 2
+button_pressed = true
+button_group = SubResource("ButtonGroup_4g441")
+text = "1X"
+
+[node name="TwoXCheckBox" type="CheckBox" parent="SettingsPanel/Margin/ControlsVBox/WindowScaleVBox/ButtonsHBox"]
+layout_mode = 2
+focus_neighbor_left = NodePath("../OneXCheckBox")
+focus_neighbor_top = NodePath("../OneXCheckBox")
+focus_neighbor_right = NodePath("../FullscreenCheckBox")
+focus_neighbor_bottom = NodePath("../FullscreenCheckBox")
+focus_next = NodePath("../FullscreenCheckBox")
+focus_previous = NodePath("../OneXCheckBox")
+mouse_default_cursor_shape = 2
+button_group = SubResource("ButtonGroup_4g441")
+text = "2X"
+
+[node name="FullscreenCheckBox" type="CheckBox" parent="SettingsPanel/Margin/ControlsVBox/WindowScaleVBox/ButtonsHBox"]
+layout_mode = 2
+focus_neighbor_left = NodePath("../TwoXCheckBox")
+focus_neighbor_top = NodePath("../TwoXCheckBox")
+focus_neighbor_right = NodePath("../../../../CloseButton")
+focus_neighbor_bottom = NodePath("../../../../CloseButton")
+focus_next = NodePath("../../../../CloseButton")
+focus_previous = NodePath("../TwoXCheckBox")
+mouse_default_cursor_shape = 2
+button_group = SubResource("ButtonGroup_4g441")
+text = "FULLSCREEN"
+
+[node name="CloseButton" type="Button" parent="SettingsPanel/Margin"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+focus_neighbor_top = NodePath("../ControlsVBox/WindowScaleVBox/ButtonsHBox/FullscreenCheckBox")
+focus_neighbor_bottom = NodePath("../ControlsVBox/VolumeHBox/MusicVBox/MusicSlider")
+focus_next = NodePath("../ControlsVBox/VolumeHBox/MusicVBox/MusicSlider")
+focus_previous = NodePath("../ControlsVBox/WindowScaleVBox/ButtonsHBox/FullscreenCheckBox")
+mouse_default_cursor_shape = 2
+text = "CLOSE"
+
+[connection signal="pressed" from="MainPanel/Margin/ButtonsVBox/SettingsButton" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="MainPanel/Margin/ButtonsVBox/QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="value_changed" from="SettingsPanel/Margin/ControlsVBox/VolumeHBox/MusicVBox/MusicSlider" to="." method="_on_music_slider_value_changed"]
+[connection signal="value_changed" from="SettingsPanel/Margin/ControlsVBox/VolumeHBox/SFXVBox/SFXSlider" to="." method="_on_sfx_slider_value_changed"]
+[connection signal="pressed" from="SettingsPanel/Margin/ControlsVBox/WindowScaleVBox/ButtonsHBox/OneXCheckBox" to="." method="_on_one_x_check_box_pressed"]
+[connection signal="pressed" from="SettingsPanel/Margin/ControlsVBox/WindowScaleVBox/ButtonsHBox/TwoXCheckBox" to="." method="_on_two_x_check_box_pressed"]
+[connection signal="pressed" from="SettingsPanel/Margin/ControlsVBox/WindowScaleVBox/ButtonsHBox/FullscreenCheckBox" to="." method="_on_fullscreen_check_box_pressed"]
+[connection signal="pressed" from="SettingsPanel/Margin/CloseButton" to="." method="_on_close_button_pressed"]
