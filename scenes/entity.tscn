@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cub1xwklpcra0"]
+
+[ext_resource type="Script" path="res://scripts/entity.gd" id="1_7lnq5"]
+
+[node name="Entity" type="Area2D"]
+script = ExtResource("1_7lnq5")

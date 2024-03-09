@@ -5,13 +5,11 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_if7k4"]
 size = Vector2(16, 16)
 
-[node name="Wall" type="Area2D"]
+[node name="Wall" type="StaticBody2D" groups=["wall"]]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 modulate = Color(0, 0, 0, 1)
 texture = ExtResource("1_ik8ve")
-centered = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(8, 8)
 shape = SubResource("RectangleShape2D_if7k4")

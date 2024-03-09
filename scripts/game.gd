@@ -45,8 +45,5 @@ func _handle_pause_state() -> void:
 		
 		if Global.game_started:
 			pause.focus_main_menu()
-		
-		DisplayServer.mouse_set_mode(DisplayServer.MOUSE_MODE_VISIBLE)
 	else:
 		pause.hide()
-		DisplayServer.mouse_set_mode(DisplayServer.MOUSE_MODE_HIDDEN)
