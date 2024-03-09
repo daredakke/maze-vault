@@ -53,13 +53,23 @@ size_flags_horizontal = 4
 size_flags_vertical = 8
 mouse_filter = 2
 
-[node name="NewGameButton" type="Button" parent="MainPanel/Margin/ButtonsVBox"]
+[node name="ContinueButton" type="Button" parent="MainPanel/Margin/ButtonsVBox"]
 unique_name_in_owner = true
 layout_mode = 2
 focus_neighbor_top = NodePath("../QuitButton")
-focus_neighbor_bottom = NodePath("../SettingsButton")
+focus_neighbor_bottom = NodePath("../NewGameButton")
 focus_next = NodePath("../SettingsButton")
 focus_previous = NodePath("../QuitButton")
+mouse_default_cursor_shape = 2
+text = "CONTINUE"
+
+[node name="NewGameButton" type="Button" parent="MainPanel/Margin/ButtonsVBox"]
+unique_name_in_owner = true
+layout_mode = 2
+focus_neighbor_top = NodePath("../ContinueButton")
+focus_neighbor_bottom = NodePath("../SettingsButton")
+focus_next = NodePath("../SettingsButton")
+focus_previous = NodePath("../ContinueButton")
 mouse_default_cursor_shape = 2
 text = "NEW GAME"
 
@@ -256,6 +266,8 @@ focus_previous = NodePath("../ControlsVBox/WindowScaleVBox/ButtonsHBox/Fullscree
 mouse_default_cursor_shape = 2
 text = "CLOSE"
 
+[connection signal="pressed" from="MainPanel/Margin/ButtonsVBox/ContinueButton" to="." method="_on_continue_button_pressed"]
+[connection signal="pressed" from="MainPanel/Margin/ButtonsVBox/NewGameButton" to="." method="_on_new_game_button_pressed"]
 [connection signal="pressed" from="MainPanel/Margin/ButtonsVBox/SettingsButton" to="." method="_on_settings_button_pressed"]
 [connection signal="pressed" from="MainPanel/Margin/ButtonsVBox/QuitButton" to="." method="_on_quit_button_pressed"]
 [connection signal="value_changed" from="SettingsPanel/Margin/ControlsVBox/VolumeHBox/MusicVBox/MusicSlider" to="." method="_on_music_slider_value_changed"]

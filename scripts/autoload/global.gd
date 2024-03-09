@@ -16,9 +16,10 @@ const BASE_SETTINGS: Dictionary = {
 
 var settings: Dictionary
 var resolutions: Array[Vector2i] = [
-	Vector2i(640, 360),
-	Vector2i(1280, 720),
+	Vector2i(640, 352),
+	Vector2i(1280, 704),
 ]
+var game_started: bool = false
 var game_paused: bool:
 	set(new_value):
 		game_paused = new_value

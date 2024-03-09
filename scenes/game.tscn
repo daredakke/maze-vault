@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://2ebxoees0r32"]
+[gd_scene load_steps=6 format=3 uid="uid://2ebxoees0r32"]
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_f6l8u"]
 [ext_resource type="PackedScene" uid="uid://ccqqq3oltseh7" path="res://scenes/splash.tscn" id="2_3wpsm"]
 [ext_resource type="Texture2D" uid="uid://douco27nrymbp" path="res://assets/scanlines-320-180.png" id="3_ct4n6"]
 [ext_resource type="PackedScene" uid="uid://dhcf22jtoctn0" path="res://scenes/pause.tscn" id="3_jsbi5"]
+[ext_resource type="PackedScene" uid="uid://bh36j4ina3tjr" path="res://scenes/wall.tscn" id="5_b62s1"]
 
 [node name="Game" type="Node2D"]
 process_mode = 3
@@ -17,10 +18,12 @@ anchor_mode = 0
 [node name="Pause" parent="Camera/UI" instance=ExtResource("3_jsbi5")]
 unique_name_in_owner = true
 process_mode = 2
+visible = false
 
 [node name="Splash" parent="Camera/UI" instance=ExtResource("2_3wpsm")]
 unique_name_in_owner = true
 process_mode = 3
+visible = false
 bypass_splash = true
 
 [node name="Foreground" type="CanvasLayer" parent="Camera"]
@@ -31,3 +34,20 @@ texture = ExtResource("3_ct4n6")
 centered = false
 
 [node name="Level" type="Node2D" parent="."]
+
+[node name="LevelTest" type="Node2D" parent="Level"]
+
+[node name="Wall" parent="Level/LevelTest" instance=ExtResource("5_b62s1")]
+scale = Vector2(1, 11)
+
+[node name="Wall2" parent="Level/LevelTest" instance=ExtResource("5_b62s1")]
+position = Vector2(304, 0)
+scale = Vector2(1, 11)
+
+[node name="Wall3" parent="Level/LevelTest" instance=ExtResource("5_b62s1")]
+position = Vector2(16, 0)
+scale = Vector2(18, 1)
+
+[node name="Wall4" parent="Level/LevelTest" instance=ExtResource("5_b62s1")]
+position = Vector2(16, 160)
+scale = Vector2(18, 1)

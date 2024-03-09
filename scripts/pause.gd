@@ -2,9 +2,14 @@ class_name Pause
 extends Control
 
 
+signal game_started
+signal game_continued
+
+var _delay_process: bool = true
 var _music_bus: int = AudioServer.get_bus_index("Music")
 var _sfx_bus: int = AudioServer.get_bus_index("SFX")
 
+@onready var continue_button: Button = %ContinueButton
 @onready var new_game_button: Button = %NewGameButton
 @onready var settings_button: Button = %SettingsButton
 @onready var settings_panel: Panel = %SettingsPanel
@@ -17,13 +22,30 @@ var _sfx_bus: int = AudioServer.get_bus_index("SFX")
 @onready var fullscreen_check_box: CheckBox = %FullscreenCheckBox
 
 
-func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("ui_cancel") and settings_panel.visible:
-		_on_close_button_pressed()
+func _ready() -> void:
+	continue_button.hide()
+
+
+func _process(_delta: float) -> void:
+	# Ensure pause menu doesn't immediately unpause when pause button pressed
+	if _delay_process:
+		_delay_process = false
+		return
+	
+	if Input.is_action_just_pressed("ui_cancel"):
+		if settings_panel.visible:
+			_on_close_button_pressed()
+			return
+		
+		if Global.game_started:
+			_on_continue_button_pressed()
 
 
 func focus_main_menu() -> void:
-	new_game_button.grab_focus()
+	if not Global.game_started:
+		new_game_button.grab_focus()
+	else:
+		continue_button.grab_focus()
 
 
 func load_settings() -> void:
@@ -55,6 +77,18 @@ func _save_settings() -> void:
 		window_scale = Global.Mode.FULLSCREEN
 
 	Global.save_settings(music_volume, sfx_volume, window_scale)
+
+
+func _on_new_game_button_pressed() -> void:
+	_delay_process = true
+	new_game_button.hide()
+	continue_button.show()
+	game_started.emit()
+
+
+func _on_continue_button_pressed() -> void:
+	_delay_process = true
+	game_continued.emit()
 
 
 func _on_settings_button_pressed() -> void:
