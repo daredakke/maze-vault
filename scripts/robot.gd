@@ -17,6 +17,7 @@ var _steps_to_move: int = 0
 
 func _ready() -> void:
 	super._ready()
+	collision_with_obstacle.connect(_end_search)
 	EventBus.player_moved.connect(_delay_search)
 	search_delay.timeout.connect(_look_for_player)
 
@@ -32,6 +33,7 @@ func reset() -> void:
 	global_position = _starting_position
 	_is_active = true
 	collision_box.disabled = false
+	_can_move_boxes = true
 	is_controlled = false
 	_moving_to_target = false
 	_steps_to_move = 0
@@ -42,17 +44,17 @@ func _delay_search() -> void:
 	search_delay.start()
 
 
+func _end_search() -> void:
+	_moving_to_target = false
+	_can_move_boxes = true
+
+
 func _look_for_player() -> void:
 	if is_controlled:
 		return
 	
 	if _moving_to_target:
-		if _steps_to_move > 0:
-			position += _last_player_direction * GRID_SIZE
-			_steps_to_move -= 1
-		else:
-			_moving_to_target = false
-			
+		_move(_last_player_direction)
 		return
 	
 	for dir in directions:
@@ -71,9 +73,9 @@ func _look_for_player() -> void:
 				break
 			
 			if _collider.is_in_group("player"):
-				_steps_to_move = _count - 2
 				_count = 1
 				_last_player_direction = directions[dir]
-				position += _last_player_direction * GRID_SIZE
+				_move(_last_player_direction)
 				_moving_to_target = true
+				_can_move_boxes = false
 				return

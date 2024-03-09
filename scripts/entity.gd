@@ -2,6 +2,8 @@ class_name Entity
 extends Area2D
 
 
+signal collision_with_obstacle
+
 const GRID_SIZE: int = 16
 
 @export var is_player: bool = false
@@ -17,6 +19,7 @@ var directions: Dictionary = {
 
 var _is_active: bool = true
 var _starting_position: Vector2
+var _can_move_boxes: bool = true
 
 
 func _ready() -> void:
@@ -52,8 +55,11 @@ func _move(dir: Vector2) -> void:
 	var collider = collision_ray.get_collider()
 	print_debug(collision_ray.get_collider())
 	
-	if collider.is_in_group("moveable"):
-		if collider.move(dir):
-			position += dir * GRID_SIZE
+	if _can_move_boxes and collider.is_in_group("moveable"):
+		var is_moveable: bool = collider.move(dir)
 		
-		return
+		if is_moveable:
+			position += dir * GRID_SIZE
+	
+	if collider.is_in_group("obstacle"):
+		collision_with_obstacle.emit()
