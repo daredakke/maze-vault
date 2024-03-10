@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://2ebxoees0r32"]
+[gd_scene load_steps=7 format=3 uid="uid://2ebxoees0r32"]
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_f6l8u"]
 [ext_resource type="PackedScene" uid="uid://ccqqq3oltseh7" path="res://scenes/splash.tscn" id="2_3wpsm"]
@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://dhcf22jtoctn0" path="res://scenes/pause.tscn" id="3_jsbi5"]
 [ext_resource type="Texture2D" uid="uid://q64fopn2ht18" path="res://assets/tiled-grid.png" id="5_d5hoy"]
 [ext_resource type="Script" path="res://scripts/level.gd" id="5_hhteu"]
-[ext_resource type="PackedScene" uid="uid://dtixxrocq748g" path="res://scenes/levels/level_test.tscn" id="6_q4wy3"]
 
 [node name="Game" type="Node2D"]
 process_mode = 3
@@ -40,8 +39,7 @@ unique_name_in_owner = true
 script = ExtResource("5_hhteu")
 
 [node name="TiledGrid" type="Sprite2D" parent="Level"]
+z_index = -10
 texture = ExtResource("5_d5hoy")
 centered = false
 offset = Vector2(8, 8)
-
-[node name="LevelTest" parent="Level" instance=ExtResource("6_q4wy3")]

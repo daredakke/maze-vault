@@ -17,3 +17,5 @@ scale = Vector2(0.8, 0.8)
 shape = SubResource("RectangleShape2D_fydvt")
 
 [node name="CollisionRay" type="RayCast2D" parent="."]
+target_position = Vector2(0, 0)
+collide_with_areas = true

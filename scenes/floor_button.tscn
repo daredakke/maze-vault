@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://kohl4tehhnkq"]
+
+[ext_resource type="Script" path="res://scripts/floor_button.gd" id="1_3nc85"]
+[ext_resource type="Texture2D" uid="uid://cg2oxqvmwdn5e" path="res://assets/circle-white-14.png" id="1_jotr4"]
+
+[node name="FloorButton" type="Node2D"]
+z_index = -1
+script = ExtResource("1_3nc85")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.976471, 0.517647, 0.0666667, 1)
+texture = ExtResource("1_jotr4")
+
+[node name="PressedRay" type="RayCast2D" parent="."]
+target_position = Vector2(0, 0)
+hit_from_inside = true
+collide_with_areas = true

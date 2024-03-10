@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://ddx07vxha00k4"]
+
+[ext_resource type="Texture2D" uid="uid://cg2oxqvmwdn5e" path="res://assets/circle-white-14.png" id="1_e6gy1"]
+[ext_resource type="Script" path="res://scripts/teleporter.gd" id="1_q4l80"]
+
+[node name="Teleporter" type="Node2D"]
+script = ExtResource("1_q4l80")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.317647, 0.0784314, 0.329412, 1)
+texture = ExtResource("1_e6gy1")
+
+[node name="StoodOnRay" type="RayCast2D" parent="."]
+target_position = Vector2(0, 0)
+hit_from_inside = true
+collide_with_areas = true
+
+[node name="CheckIfOpenDelay" type="Timer" parent="."]
+wait_time = 0.05
+autostart = true
+
+[connection signal="timeout" from="CheckIfOpenDelay" to="." method="_check_if_open_delay_timeout"]

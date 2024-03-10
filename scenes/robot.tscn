@@ -6,6 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dixpw"]
 
 [node name="Robot" type="Area2D" node_paths=PackedStringArray("player_ray", "collision_box", "collision_ray")]
+z_index = 20
 script = ExtResource("1_27bsu")
 player_ray = NodePath("PlayerRay")
 collision_box = NodePath("CollisionShape2D")

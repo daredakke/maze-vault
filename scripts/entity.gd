@@ -52,14 +52,12 @@ func _move(dir: Vector2) -> void:
 		position += dir * GRID_SIZE
 		return
 	
-	var collider = collision_ray.get_collider()
-	print_debug(collision_ray.get_collider())
+	var collider := collision_ray.get_collider()
 	
 	if _can_move_boxes and collider.is_in_group("moveable"):
-		var is_moveable: bool = collider.move(dir)
-		
-		if is_moveable:
+		if collider.move(dir):
 			position += dir * GRID_SIZE
+			return
 	
 	if collider.is_in_group("obstacle"):
 		collision_with_obstacle.emit()

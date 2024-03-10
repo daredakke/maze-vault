@@ -65,14 +65,11 @@ func _look_for_player() -> void:
 			_collider = player_ray.get_collider()
 			_count += 1
 			
-			if not _collider:
-				continue
-				
-			if _collider.is_in_group("obstacle"):
+			if _collider and _collider.is_in_group("obstacle"):
 				_count = 1
 				break
 			
-			if _collider.is_in_group("player"):
+			if _collider and _collider.is_in_group("player"):
 				_count = 1
 				_last_player_direction = directions[dir]
 				_move(_last_player_direction)

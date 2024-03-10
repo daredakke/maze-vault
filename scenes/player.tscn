@@ -6,6 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wp5ws"]
 
 [node name="Player" type="Area2D" node_paths=PackedStringArray("collision_box", "collision_ray") groups=["player"]]
+z_index = 10
 script = ExtResource("1_sidmr")
 is_player = true
 collision_box = NodePath("CollisionShape2D")

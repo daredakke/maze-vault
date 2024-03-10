@@ -4,6 +4,7 @@ extends Node2D
 
 @onready var splash: Splash = %Splash
 @onready var pause: Pause = %Pause
+@onready var level: Level = %Level
 
 
 func _ready() -> void:
@@ -26,6 +27,9 @@ func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("reset"):
 		EventBus.level_reset.emit()
 		return
+	
+	if Input.is_action_just_pressed("TEST_next_level"):
+		level.next_level()
 
 
 func _start_game() -> void:
