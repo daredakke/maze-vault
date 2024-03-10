@@ -20,6 +20,7 @@ var directions: Dictionary = {
 var _is_active: bool = true
 var _starting_position: Vector2
 var _can_move_boxes: bool = true
+var _last_direction := Vector2.RIGHT
 
 
 func _ready() -> void:
@@ -36,6 +37,7 @@ func _process(_delta: float) -> void:
 		if Input.is_action_just_pressed(dir):
 			if is_player:
 				_move(directions[dir])
+				_last_direction = directions[dir]
 				EventBus.player_moved.emit()
 			else:
 				call_deferred("_move", directions[dir])

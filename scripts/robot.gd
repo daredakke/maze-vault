@@ -7,7 +7,6 @@ extends Entity
 var is_controlled: bool = false
 
 var _collider = null
-var _count: int = 1
 var _moving_to_target: bool = false
 var _last_player_direction: Vector2
 
@@ -34,6 +33,18 @@ func reset() -> void:
 	is_controlled = false
 	_moving_to_target = false
 
+
+func take_control() -> void:
+	is_controlled = true
+	_moving_to_target = false
+	_can_move_boxes = true
+
+
+func release_control() -> void:
+	is_controlled = false
+	_can_move_boxes = false
+
+
 # Wait before searching so the robot moves after the player does
 func _delay_search() -> void:
 	search_delay.start()
@@ -54,21 +65,17 @@ func _look_for_player() -> void:
 		return
 	
 	for dir in directions:
-		while true:
-			player_ray.target_position = directions[dir] * (GRID_SIZE * _count)
-			player_ray.force_raycast_update()
-			
-			_collider = player_ray.get_collider()
-			_count += 1
-			
-			if _collider and _collider.is_in_group("obstacle"):
-				_count = 1
-				break
-			
-			if _collider and _collider.is_in_group("player"):
-				_count = 1
-				_last_player_direction = directions[dir]
-				_move(_last_player_direction)
-				_moving_to_target = true
-				_can_move_boxes = false
-				return
+		player_ray.target_position = directions[dir] * (GRID_SIZE * 20)
+		player_ray.force_raycast_update()
+		
+		_collider = player_ray.get_collider()
+		
+		if _collider and _collider.is_in_group("obstacle"):
+			continue
+		
+		if _collider and _collider.is_in_group("player"):
+			_last_player_direction = directions[dir]
+			_move(_last_player_direction)
+			_moving_to_target = true
+			_can_move_boxes = false
+			return

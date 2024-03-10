@@ -23,3 +23,19 @@ shape = SubResource("RectangleShape2D_wp5ws")
 [node name="CollisionRay" type="RayCast2D" parent="."]
 target_position = Vector2(0, 0)
 collide_with_areas = true
+
+[node name="ShootRay" type="RayCast2D" parent="."]
+target_position = Vector2(0, 0)
+collide_with_areas = true
+
+[node name="Projectile" type="Line2D" parent="."]
+z_index = -1
+points = PackedVector2Array(0, 0, 0, 0)
+width = 2.0
+default_color = Color(0.666667, 0.278431, 1, 1)
+
+[node name="ProjectileReset" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
+
+[connection signal="timeout" from="ProjectileReset" to="." method="_reset_projectile"]
