@@ -13,63 +13,70 @@
 [node name="Walls" type="Node2D" parent="."]
 
 [node name="Wall" parent="Walls" instance=ExtResource("1_h7gn8")]
-position = Vector2(160, 112)
-scale = Vector2(7, 7)
+position = Vector2(256, 96)
+scale = Vector2(11, 7)
 
 [node name="Wall2" parent="Walls" instance=ExtResource("1_h7gn8")]
-position = Vector2(0, 96)
-scale = Vector2(1, 13)
+position = Vector2(16, 80)
+scale = Vector2(5, 13)
 
 [node name="Wall3" parent="Walls" instance=ExtResource("1_h7gn8")]
-position = Vector2(320, 96)
-scale = Vector2(3, 13)
+position = Vector2(320, 80)
+scale = Vector2(7, 13)
 
 [node name="Wall4" parent="Walls" instance=ExtResource("1_h7gn8")]
-position = Vector2(160, 0)
+position = Vector2(208, -16)
 scale = Vector2(20, 5)
 
 [node name="Wall5" parent="Walls" instance=ExtResource("1_h7gn8")]
-position = Vector2(160, 176)
-scale = Vector2(20, 1)
+position = Vector2(208, 176)
+scale = Vector2(20, 3)
 
 [node name="Entities" type="Node2D" parent="."]
 
 [node name="Player" parent="Entities" instance=ExtResource("2_ljylc")]
-position = Vector2(32, 128)
+position = Vector2(112, 128)
 
 [node name="Robot" parent="Entities" instance=ExtResource("3_3ipq1")]
-position = Vector2(256, 160)
+position = Vector2(256, 32)
 
 [node name="Boxes" type="Node2D" parent="."]
 
 [node name="Box3" parent="Boxes" node_paths=PackedStringArray("collision_box") instance=ExtResource("4_3mq48")]
-position = Vector2(224, 64)
-collision_box = NodePath("")
-
-[node name="Box4" parent="Boxes" node_paths=PackedStringArray("collision_box") instance=ExtResource("4_3mq48")]
-position = Vector2(272, 48)
-collision_box = NodePath("")
-
-[node name="Box5" parent="Boxes" node_paths=PackedStringArray("collision_box") instance=ExtResource("4_3mq48")]
-position = Vector2(272, 64)
+position = Vector2(128, 48)
 collision_box = NodePath("")
 
 [node name="Box6" parent="Boxes" node_paths=PackedStringArray("collision_box") instance=ExtResource("4_3mq48")]
-position = Vector2(240, 64)
+position = Vector2(112, 64)
 collision_box = NodePath("")
 
 [node name="Interactables" type="Node2D" parent="."]
 
 [node name="Teleporter" parent="Interactables" instance=ExtResource("5_60ljc")]
-position = Vector2(16, 64)
+position = Vector2(112, 144)
 
 [node name="FloorButton" parent="Interactables" instance=ExtResource("6_7ns8e")]
-position = Vector2(96, 160)
+position = Vector2(160, 144)
 
 [node name="Floor" type="Node2D" parent="."]
 
 [node name="Void" parent="Floor" instance=ExtResource("7_f5fjj")]
-position = Vector2(16, 48)
+position = Vector2(144, 64)
+
+[node name="Void3" parent="Floor" instance=ExtResource("7_f5fjj")]
+position = Vector2(144, 80)
+
+[node name="Void4" parent="Floor" instance=ExtResource("7_f5fjj")]
+position = Vector2(144, 96)
+
+[node name="Void5" parent="Floor" instance=ExtResource("7_f5fjj")]
+position = Vector2(144, 112)
+
+[node name="Void6" parent="Floor" instance=ExtResource("7_f5fjj")]
+position = Vector2(144, 128)
+
+[node name="Void7" parent="Floor" instance=ExtResource("7_f5fjj")]
+position = Vector2(144, 144)
 
 [node name="Void2" parent="Floor" instance=ExtResource("7_f5fjj")]
-position = Vector2(32, 48)
+position = Vector2(144, 48)
