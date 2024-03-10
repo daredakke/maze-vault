@@ -29,6 +29,9 @@ func _ready() -> void:
 
 
 func _process(_delta: float) -> void:
+	if not _is_active:
+		return
+	
 	for dir in directions.keys():
 		if Input.is_action_just_pressed(dir):
 			if is_player:

@@ -1,17 +1,20 @@
-[gd_scene load_steps=5 format=3 uid="uid://c7kakktkoxqv4"]
+[gd_scene load_steps=8 format=3 uid="uid://c7kakktkoxqv4"]
 
 [ext_resource type="PackedScene" uid="uid://bh36j4ina3tjr" path="res://scenes/wall.tscn" id="1_h7gn8"]
 [ext_resource type="PackedScene" uid="uid://ciaf6xdrrx2v4" path="res://scenes/player.tscn" id="2_ljylc"]
 [ext_resource type="PackedScene" uid="uid://c2uip3188o5lx" path="res://scenes/robot.tscn" id="3_3ipq1"]
 [ext_resource type="PackedScene" uid="uid://dop7wr7kmcvdl" path="res://scenes/box.tscn" id="4_3mq48"]
+[ext_resource type="PackedScene" uid="uid://ddx07vxha00k4" path="res://scenes/teleporter.tscn" id="5_60ljc"]
+[ext_resource type="PackedScene" uid="uid://kohl4tehhnkq" path="res://scenes/floor_button.tscn" id="6_7ns8e"]
+[ext_resource type="PackedScene" uid="uid://315w6n1us2nl" path="res://scenes/void.tscn" id="7_f5fjj"]
 
 [node name="LevelTest2" type="Node2D"]
 
 [node name="Walls" type="Node2D" parent="."]
 
 [node name="Wall" parent="Walls" instance=ExtResource("1_h7gn8")]
-position = Vector2(160, 88)
-scale = Vector2(3, 8)
+position = Vector2(160, 112)
+scale = Vector2(7, 7)
 
 [node name="Wall2" parent="Walls" instance=ExtResource("1_h7gn8")]
 position = Vector2(0, 96)
@@ -19,11 +22,11 @@ scale = Vector2(1, 13)
 
 [node name="Wall3" parent="Walls" instance=ExtResource("1_h7gn8")]
 position = Vector2(320, 96)
-scale = Vector2(1, 13)
+scale = Vector2(3, 13)
 
 [node name="Wall4" parent="Walls" instance=ExtResource("1_h7gn8")]
 position = Vector2(160, 0)
-scale = Vector2(20, 1)
+scale = Vector2(20, 5)
 
 [node name="Wall5" parent="Walls" instance=ExtResource("1_h7gn8")]
 position = Vector2(160, 176)
@@ -32,12 +35,41 @@ scale = Vector2(20, 1)
 [node name="Entities" type="Node2D" parent="."]
 
 [node name="Player" parent="Entities" instance=ExtResource("2_ljylc")]
-position = Vector2(64, 32)
+position = Vector2(32, 128)
 
 [node name="Robot" parent="Entities" instance=ExtResource("3_3ipq1")]
 position = Vector2(256, 160)
 
 [node name="Boxes" type="Node2D" parent="."]
 
-[node name="Box" parent="Boxes" instance=ExtResource("4_3mq48")]
-position = Vector2(160, 160)
+[node name="Box3" parent="Boxes" node_paths=PackedStringArray("collision_box") instance=ExtResource("4_3mq48")]
+position = Vector2(224, 64)
+collision_box = NodePath("")
+
+[node name="Box4" parent="Boxes" node_paths=PackedStringArray("collision_box") instance=ExtResource("4_3mq48")]
+position = Vector2(272, 48)
+collision_box = NodePath("")
+
+[node name="Box5" parent="Boxes" node_paths=PackedStringArray("collision_box") instance=ExtResource("4_3mq48")]
+position = Vector2(272, 64)
+collision_box = NodePath("")
+
+[node name="Box6" parent="Boxes" node_paths=PackedStringArray("collision_box") instance=ExtResource("4_3mq48")]
+position = Vector2(240, 64)
+collision_box = NodePath("")
+
+[node name="Interactables" type="Node2D" parent="."]
+
+[node name="Teleporter" parent="Interactables" instance=ExtResource("5_60ljc")]
+position = Vector2(16, 64)
+
+[node name="FloorButton" parent="Interactables" instance=ExtResource("6_7ns8e")]
+position = Vector2(96, 160)
+
+[node name="Floor" type="Node2D" parent="."]
+
+[node name="Void" parent="Floor" instance=ExtResource("7_f5fjj")]
+position = Vector2(16, 48)
+
+[node name="Void2" parent="Floor" instance=ExtResource("7_f5fjj")]
+position = Vector2(32, 48)

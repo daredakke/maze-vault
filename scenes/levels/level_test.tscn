@@ -61,7 +61,7 @@ position = Vector2(144, 48)
 position = Vector2(112, 112)
 
 [node name="Robot" parent="Entities" instance=ExtResource("3_8bq0y")]
-position = Vector2(160, 96)
+position = Vector2(160, 144)
 
 [node name="Boxes" type="Node2D" parent="."]
 

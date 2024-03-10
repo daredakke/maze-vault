@@ -46,7 +46,7 @@ func _end_search() -> void:
 
 
 func _look_for_player() -> void:
-	if is_controlled:
+	if is_controlled or not _is_active:
 		return
 	
 	if _moving_to_target:
