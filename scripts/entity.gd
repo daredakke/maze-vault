@@ -42,6 +42,13 @@ func reset() -> void:
 	global_position = _starting_position
 	_is_active = true
 	collision_box.disabled = false
+	show()
+
+
+func destroy() -> void:
+	_is_active = false
+	collision_box.disabled = true
+	hide()
 
 
 func _move(dir: Vector2) -> void:
@@ -61,3 +68,7 @@ func _move(dir: Vector2) -> void:
 	
 	if collider.is_in_group("obstacle"):
 		collision_with_obstacle.emit()
+	
+	if collider.is_in_group("player"):
+		collider.destroy()
+		EventBus.level_reset.emit()

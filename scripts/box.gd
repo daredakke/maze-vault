@@ -4,9 +4,11 @@ extends Area2D
 
 const GRID_SIZE: int = 16
 
-@onready var collision_ray: RayCast2D = $CollisionRay
+@export var collision_box: CollisionShape2D
 
 var _starting_position: Vector2
+
+@onready var collision_ray: RayCast2D = $CollisionRay
 
 
 func _ready() -> void:
@@ -17,6 +19,13 @@ func _ready() -> void:
 
 func reset() -> void:
 	global_position = _starting_position
+	collision_box.disabled = false
+	show()
+
+
+func destroy() -> void:
+	collision_box.disabled = true
+	hide()
 
 
 func move(dir: Vector2) -> bool:

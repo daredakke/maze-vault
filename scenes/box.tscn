@@ -5,8 +5,10 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fydvt"]
 
-[node name="Box" type="Area2D" groups=["moveable", "obstacle"]]
+[node name="Box" type="Area2D" node_paths=PackedStringArray("collision_box") groups=["moveable", "obstacle"]]
+z_index = 15
 script = ExtResource("1_2e5mo")
+collision_box = NodePath("CollisionShape2D")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 modulate = Color(0.27451, 0.211765, 0.129412, 1)

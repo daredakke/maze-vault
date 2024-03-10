@@ -4,7 +4,7 @@ extends Node2D
 
 var is_pressed: bool = false
 
-var _wait_time: int = 5
+var _wait_time: int = 6
 var _wait_count: int = 0
 var _delay_check: bool = false
 
@@ -12,6 +12,7 @@ var _delay_check: bool = false
 
 
 func _ready() -> void:
+	EventBus.level_reset.connect(reset)
 	EventBus.player_moved.connect(_start_check_delay)
 
 
@@ -25,6 +26,10 @@ func _process(_delta: float) -> void:
 		_check_if_pressed()
 		_wait_count = 0
 		_delay_check = false
+
+
+func reset() -> void:
+	is_pressed = false
 
 
 func _start_check_delay() -> void:

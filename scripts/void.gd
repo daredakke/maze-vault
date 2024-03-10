@@ -4,7 +4,9 @@ extends Node2D
 
 @export var is_one_step_tile: bool = false
 
-var _wait_time: int = 5
+var _fresh: bool = true
+var _stood_on: bool = false
+var _wait_time: int = 6
 var _wait_count: int = 0
 var _delay_check: bool = false
 
@@ -35,6 +37,8 @@ func _process(_delta: float) -> void:
 func reset() -> void:
 	if is_one_step_tile:
 		sprite_2d.frame = 1
+		_fresh = true
+		_stood_on = false
 
 
 func _start_check_delay() -> void:
@@ -45,13 +49,23 @@ func _check_if_stood_on() -> void:
 	stood_on_ray.force_raycast_update()
 	
 	if not stood_on_ray.is_colliding():
-		return
+		_stood_on = false
+	else:
+		# This tile hasn't been stepped on before
+		if _fresh:
+			_fresh = false
+			_stood_on = true
 	
-	var collider := stood_on_ray.get_collider()
-	
-	if collider is Entity:
-		if sprite_2d.frame == 1:
+	if sprite_2d.frame == 1:
+		# Something moved off the ice, turn into void
+		if not _fresh and not _stood_on:
 			sprite_2d.frame = 0
-			print("BREAK")
-		else:
-			print("DED")
+		
+		return
+	else:
+		if stood_on_ray.is_colliding():
+			var collider := stood_on_ray.get_collider()
+			collider.destroy()
+			
+			if collider.is_in_group("player"):
+				EventBus.level_reset.emit()

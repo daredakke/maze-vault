@@ -29,5 +29,5 @@ target_position = Vector2(0, 0)
 collide_with_areas = true
 
 [node name="SearchDelay" type="Timer" parent="."]
-wait_time = 0.05
+wait_time = 0.02
 one_shot = true

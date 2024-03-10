@@ -10,7 +10,6 @@ var _collider = null
 var _count: int = 1
 var _moving_to_target: bool = false
 var _last_player_direction: Vector2
-var _steps_to_move: int = 0
 
 @onready var search_delay: Timer = $SearchDelay
 
@@ -29,15 +28,11 @@ func _process(_delta: float) -> void:
 
 
 func reset() -> void:
+	super.reset()
 	search_delay.stop()
-	global_position = _starting_position
-	_is_active = true
-	collision_box.disabled = false
 	_can_move_boxes = true
 	is_controlled = false
 	_moving_to_target = false
-	_steps_to_move = 0
-
 
 # Wait before searching so the robot moves after the player does
 func _delay_search() -> void:
@@ -47,6 +42,7 @@ func _delay_search() -> void:
 func _end_search() -> void:
 	_moving_to_target = false
 	_can_move_boxes = true
+	_look_for_player()
 
 
 func _look_for_player() -> void:

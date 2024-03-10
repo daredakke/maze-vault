@@ -6,15 +6,17 @@ extends Node2D
 
 var _button_pressed_count: int = 0
 var _is_open: bool = false
-var _wait_time: int = 5
+var _wait_time: int = 6
 var _wait_count: int = 0
 var _delay_check: bool = false
 
 @onready var sprite_2d: Sprite2D = $Sprite2D
 @onready var stood_on_ray: RayCast2D = $StoodOnRay
+@onready var check_if_open_delay: Timer = $CheckIfOpenDelay
 
 
 func _ready() -> void:
+	EventBus.level_reset.connect(reset)
 	EventBus.player_moved.connect(_start_check_delay)
 
 
@@ -28,6 +30,12 @@ func _process(_delta: float) -> void:
 		_check_if_stood_on()
 		_wait_count = 0
 		_delay_check = false
+
+
+func reset() -> void:
+	_button_pressed_count = 0
+	_is_open = false
+	_check_if_open_delay_timeout()
 
 
 func _start_check_delay() -> void:
