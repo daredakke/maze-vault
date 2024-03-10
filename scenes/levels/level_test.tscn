@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dtixxrocq748g"]
+[gd_scene load_steps=9 format=3 uid="uid://dtixxrocq748g"]
 
 [ext_resource type="PackedScene" uid="uid://bh36j4ina3tjr" path="res://scenes/wall.tscn" id="1_cf2x5"]
 [ext_resource type="PackedScene" uid="uid://ciaf6xdrrx2v4" path="res://scenes/player.tscn" id="2_pv4xi"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://kohl4tehhnkq" path="res://scenes/floor_button.tscn" id="5_fvb3e"]
 [ext_resource type="PackedScene" uid="uid://315w6n1us2nl" path="res://scenes/void.tscn" id="5_hcod0"]
 [ext_resource type="PackedScene" uid="uid://ddx07vxha00k4" path="res://scenes/teleporter.tscn" id="5_trvfg"]
+[ext_resource type="PackedScene" uid="uid://de5osx7isgmvm" path="res://scenes/forcefield.tscn" id="7_nk87r"]
 
 [node name="LevelTest" type="Node2D"]
 
@@ -194,6 +195,30 @@ position = Vector2(320, 32)
 [node name="Wall69" parent="Walls" instance=ExtResource("1_cf2x5")]
 position = Vector2(320, 16)
 
+[node name="Wall73" parent="Walls" instance=ExtResource("1_cf2x5")]
+position = Vector2(192, 64)
+
+[node name="Wall74" parent="Walls" instance=ExtResource("1_cf2x5")]
+position = Vector2(192, 48)
+
+[node name="Wall75" parent="Walls" instance=ExtResource("1_cf2x5")]
+position = Vector2(192, 32)
+
+[node name="Wall76" parent="Walls" instance=ExtResource("1_cf2x5")]
+position = Vector2(192, 16)
+
+[node name="Wall77" parent="Walls" instance=ExtResource("1_cf2x5")]
+position = Vector2(192, 160)
+
+[node name="Wall78" parent="Walls" instance=ExtResource("1_cf2x5")]
+position = Vector2(192, 144)
+
+[node name="Wall79" parent="Walls" instance=ExtResource("1_cf2x5")]
+position = Vector2(192, 128)
+
+[node name="Wall80" parent="Walls" instance=ExtResource("1_cf2x5")]
+position = Vector2(192, 112)
+
 [node name="Wall70" parent="Walls" instance=ExtResource("1_cf2x5")]
 position = Vector2(0, 16)
 
@@ -211,7 +236,11 @@ position = Vector2(160, 144)
 position = Vector2(128, 16)
 
 [node name="Box" parent="Boxes" instance=ExtResource("4_6qvdd")]
-position = Vector2(80, 112)
+position = Vector2(208, 128)
+
+[node name="Box3" parent="Boxes" node_paths=PackedStringArray("collision_box") instance=ExtResource("4_6qvdd")]
+position = Vector2(208, 112)
+collision_box = NodePath("../Box/CollisionShape2D")
 
 [node name="Interactables" type="Node2D" parent="."]
 
@@ -223,9 +252,15 @@ buttons = [NodePath("../FloorButton"), NodePath("../FloorButton2")]
 position = Vector2(160, 16)
 
 [node name="FloorButton2" parent="Interactables" instance=ExtResource("5_fvb3e")]
-position = Vector2(160, 160)
+position = Vector2(208, 144)
 
 [node name="Floor" type="Node2D" parent="."]
+
+[node name="Forcefield" parent="Floor" instance=ExtResource("7_nk87r")]
+position = Vector2(192, 80)
+
+[node name="Forcefield2" parent="Floor" instance=ExtResource("7_nk87r")]
+position = Vector2(192, 96)
 
 [node name="Void" parent="Floor" instance=ExtResource("5_hcod0")]
 position = Vector2(96, 160)
