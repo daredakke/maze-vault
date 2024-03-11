@@ -100,3 +100,13 @@ func _look_for_player() -> void:
 			_can_move_boxes = false
 			return
 
+
+func _move(dir: Vector2) -> void:
+	super._move(dir)
+	
+	if collision_ray.is_colliding():
+		var collider := collision_ray.get_collider()
+		
+		if not is_controlled and collider.is_in_group("player"):
+			collider.destroy()
+			EventBus.level_reset.emit()

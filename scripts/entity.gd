@@ -73,10 +73,6 @@ func _move(dir: Vector2) -> void:
 	
 	if collider.is_in_group("obstacle"):
 		collision_with_obstacle.emit()
-	
-	if collider.is_in_group("player"):
-		collider.destroy()
-		EventBus.level_reset.emit()
 
 
 func _get_dir_name(dir: Vector2) -> String:

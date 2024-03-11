@@ -3,10 +3,14 @@ extends Node2D
 
 const LEVEL_TEST: PackedScene = preload("res://scenes/levels/level_test.tscn")
 const LEVEL_TEST_2: PackedScene = preload("res://scenes/levels/level_test_2.tscn")
+const LEVEL_02: PackedScene = preload("res://scenes/levels/level_02.tscn")
+const LEVEL_03: PackedScene = preload("res://scenes/levels/level_03.tscn")
+
 
 var _level_scenes: Array = [
-	LEVEL_TEST,
-	LEVEL_TEST_2,
+	LEVEL_02,
+	LEVEL_03,
+	LEVEL_TEST_2
 ]
 var _level_instances: Array
 var _current_level_index: int = 0

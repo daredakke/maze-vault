@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://ce1dr7a6qup1t"]
+
+[node name="Level01" type="Node2D"]
+
+[node name="Walls" type="Node2D" parent="."]
+
+[node name="Entities" type="Node2D" parent="."]
+
+[node name="Interactables" type="Node2D" parent="."]
+
+[node name="BG" type="Node2D" parent="."]
