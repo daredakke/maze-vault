@@ -38,6 +38,14 @@ func _process(_delta: float) -> void:
 		for dir in directions.keys():
 			if Input.is_action_just_pressed(dir):
 				animation_player.play(dir + "_2")
+	
+	if collision_ray.is_colliding():
+		var collider := collision_ray.get_collider()
+		
+		if not is_controlled and collider is Robot:
+			animation_player.play("down_1")
+			destroy()
+			collider.destroy()
 
 
 func reset() -> void:
@@ -112,8 +120,3 @@ func _move(dir: Vector2) -> void:
 		if not is_controlled and collider.is_in_group("player"):
 			collider.destroy()
 			EventBus.level_reset.emit()
-			
-		if not is_controlled and collider is Robot:
-			animation_player.play("down_1")
-			destroy()
-			collider.destroy()

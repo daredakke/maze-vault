@@ -16,7 +16,6 @@ var _delay_check: bool = false
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 
 
-
 func _ready() -> void:
 	EventBus.level_reset.connect(reset)
 	EventBus.player_moved.connect(_start_check_delay)
