@@ -171,11 +171,12 @@ position = Vector2(112, 128)
 
 [node name="Robot" parent="Entities" instance=ExtResource("3_3ipq1")]
 position = Vector2(240, 32)
+is_player = null
 
 [node name="Boxes" type="Node2D" parent="."]
 
 [node name="Box3" parent="Boxes" instance=ExtResource("4_3mq48")]
-position = Vector2(128, 48)
+position = Vector2(64, 48)
 
 [node name="Box6" parent="Boxes" instance=ExtResource("4_3mq48")]
 position = Vector2(112, 64)

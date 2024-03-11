@@ -10,9 +10,11 @@ var _wait_time: int = 6
 var _wait_count: int = 0
 var _delay_check: bool = false
 
-@onready var sprite_2d: Sprite2D = $Sprite2D
+@onready var sprite: Sprite2D = $Sprite2D
 @onready var stood_on_ray: RayCast2D = $StoodOnRay
 @onready var check_if_open_delay: Timer = $CheckIfOpenDelay
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
+
 
 
 func _ready() -> void:
@@ -35,6 +37,8 @@ func _process(_delta: float) -> void:
 func reset() -> void:
 	_button_pressed_count = 0
 	_is_open = false
+	animation_player.stop()
+	sprite.frame = 0
 	_check_if_open_delay_timeout()
 
 
@@ -49,11 +53,12 @@ func _check_if_open_delay_timeout() -> void:
 			_button_pressed_count += 1
 	
 	if _button_pressed_count == buttons.size():
-		sprite_2d.modulate = Color.from_hsv(0.8, 0.76, 0.80, 1.0)
 		_is_open = true
+		animation_player.play("active")
 	else:
-		sprite_2d.modulate = Color.from_hsv(0.8, 0.76, 0.33, 1.0)
 		_is_open = false
+		animation_player.stop()
+		sprite.frame = 0
 	
 	_button_pressed_count = 0
 

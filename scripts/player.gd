@@ -2,16 +2,19 @@ class_name Player
 extends Entity
 
 
-var _robot_possessed: Robot
+var _robot_possessed
 
 @onready var shoot_ray: RayCast2D = $ShootRay
 @onready var projectile: Line2D = $Projectile
 @onready var projectile_reset: Timer = $ProjectileReset
+@onready var cooldown: Timer = $Cooldown
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
 
 
 func _ready() -> void:
 	super._ready()
 	
+	animation_player.play("down")
 	projectile.set_point_position(0, Vector2.ZERO)
 	projectile.set_point_position(1, Vector2.ZERO)
 
@@ -19,13 +22,26 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	super._process(_delta)
 	
-	if Input.is_action_just_pressed("action"):
+	for dir in directions.keys():
+		if Input.is_action_just_pressed(dir):
+			animation_player.play(dir)
+	
+	if Input.is_action_just_pressed("action") and cooldown.is_stopped():
 		_fire_ray()
+
+
+func reset() -> void:
+	super.reset()
+	animation_player.play("down")
+	_robot_possessed = null
 
 
 func _fire_ray() -> void:
 	if _robot_possessed:
+		_robot_possessed.animation_player.play("down_1")
 		_robot_possessed.release_control()
+		_robot_possessed = null
+		return
 	
 	shoot_ray.target_position = _last_direction * (GRID_SIZE * 20)
 	shoot_ray.force_raycast_update()
@@ -34,11 +50,13 @@ func _fire_ray() -> void:
 	var pos = collider.global_position - global_position
 	
 	projectile.set_point_position(1, pos)
+	cooldown.start()
 	projectile_reset.start()
 	
 	if collider is Robot:
 		collider.take_control()
 		_robot_possessed = collider
+		_robot_possessed.animation_player.play("down_2")
 
 
 func _reset_projectile() -> void:

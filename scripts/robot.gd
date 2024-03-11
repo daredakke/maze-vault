@@ -4,17 +4,28 @@ extends Entity
 
 @export var player_ray: RayCast2D
 
-var is_controlled: bool = false
+var is_controlled: bool = false:
+	set(value):
+		is_controlled = value
+		
+		if is_controlled:
+			_anim_type = 2
+		else:
+			_anim_type = 1
 
 var _collider = null
 var _moving_to_target: bool = false
 var _last_player_direction: Vector2
+var _anim_type: int = 1
 
 @onready var search_delay: Timer = $SearchDelay
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
 
 
 func _ready() -> void:
 	super._ready()
+	
+	animation_player.play("down_1")
 	collision_with_obstacle.connect(_end_search)
 	EventBus.player_moved.connect(_delay_search)
 	search_delay.timeout.connect(_look_for_player)
@@ -23,11 +34,16 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	if is_controlled:
 		super._process(_delta)
-		return
+	
+		for dir in directions.keys():
+			if Input.is_action_just_pressed(dir):
+				animation_player.play(dir + "_2")
 
 
 func reset() -> void:
 	super.reset()
+	
+	animation_player.play("down_1")
 	search_delay.stop()
 	_can_move_boxes = true
 	is_controlled = false
@@ -62,6 +78,9 @@ func _look_for_player() -> void:
 	
 	if _moving_to_target:
 		_move(_last_player_direction)
+		var dir_name := _get_dir_name(_last_player_direction)
+		
+		animation_player.play(dir_name + "_1")
 		return
 	
 	for dir in directions:
@@ -76,6 +95,8 @@ func _look_for_player() -> void:
 		if _collider and _collider.is_in_group("player"):
 			_last_player_direction = directions[dir]
 			_move(_last_player_direction)
+			animation_player.play(dir + "_1")
 			_moving_to_target = true
 			_can_move_boxes = false
 			return
+

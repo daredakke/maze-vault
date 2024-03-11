@@ -2,12 +2,20 @@ class_name FloorButton
 extends Node2D
 
 
-var is_pressed: bool = false
+var is_pressed: bool = false:
+	set(value):
+		is_pressed = value
+		
+		if is_pressed:
+			sprite.frame = 1
+		else:
+			sprite.frame = 0
 
 var _wait_time: int = 6
 var _wait_count: int = 0
 var _delay_check: bool = false
 
+@onready var sprite: Sprite2D = $Sprite2D
 @onready var pressed_ray: RayCast2D = $PressedRay
 
 

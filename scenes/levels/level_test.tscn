@@ -229,6 +229,7 @@ position = Vector2(112, 112)
 
 [node name="Robot" parent="Entities" instance=ExtResource("3_8bq0y")]
 position = Vector2(160, 144)
+is_player = null
 
 [node name="Boxes" type="Node2D" parent="."]
 
@@ -245,7 +246,7 @@ collision_box = NodePath("../Box/CollisionShape2D")
 [node name="Interactables" type="Node2D" parent="."]
 
 [node name="Teleporter" parent="Interactables" node_paths=PackedStringArray("buttons") instance=ExtResource("5_trvfg")]
-position = Vector2(112, 80)
+position = Vector2(48, 80)
 buttons = [NodePath("../FloorButton"), NodePath("../FloorButton2")]
 
 [node name="FloorButton" parent="Interactables" instance=ExtResource("5_fvb3e")]
@@ -263,12 +264,12 @@ position = Vector2(192, 80)
 position = Vector2(192, 96)
 
 [node name="Void" parent="Floor" instance=ExtResource("5_hcod0")]
-position = Vector2(96, 160)
+position = Vector2(208, 80)
 is_one_step_tile = true
 
 [node name="Void2" parent="Floor" instance=ExtResource("5_hcod0")]
-position = Vector2(112, 160)
+position = Vector2(208, 96)
 is_one_step_tile = true
 
 [node name="Void3" parent="Floor" instance=ExtResource("5_hcod0")]
-position = Vector2(80, 160)
+position = Vector2(208, 160)

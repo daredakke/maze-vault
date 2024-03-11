@@ -20,7 +20,7 @@ var directions: Dictionary = {
 var _is_active: bool = true
 var _starting_position: Vector2
 var _can_move_boxes: bool = true
-var _last_direction := Vector2.RIGHT
+var _last_direction := Vector2.DOWN
 
 
 func _ready() -> void:
@@ -77,3 +77,16 @@ func _move(dir: Vector2) -> void:
 	if collider.is_in_group("player"):
 		collider.destroy()
 		EventBus.level_reset.emit()
+
+
+func _get_dir_name(dir: Vector2) -> String:
+	if dir == Vector2.UP:
+		return "up"
+	elif dir == Vector2.RIGHT:
+		return "right"
+	elif dir == Vector2.LEFT:
+		return "left"
+	elif dir == Vector2.DOWN:
+		return "down"
+	else:
+		return ""

@@ -9,10 +9,12 @@ const GRID_SIZE: int = 16
 var _starting_position: Vector2
 
 @onready var collision_ray: RayCast2D = $CollisionRay
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
 
 
 func _ready() -> void:
 	EventBus.level_reset.connect(reset)
+	animation_player.play("flicker")
 	
 	_starting_position = global_position
 
