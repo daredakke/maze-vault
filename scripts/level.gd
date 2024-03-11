@@ -5,12 +5,16 @@ const LEVEL_TEST: PackedScene = preload("res://scenes/levels/level_test.tscn")
 const LEVEL_TEST_2: PackedScene = preload("res://scenes/levels/level_test_2.tscn")
 const LEVEL_02: PackedScene = preload("res://scenes/levels/level_02.tscn")
 const LEVEL_03: PackedScene = preload("res://scenes/levels/level_03.tscn")
+const LEVEL_04: PackedScene = preload("res://scenes/levels/level_04.tscn")
+const LEVEL_05: PackedScene = preload("res://scenes/levels/level_05.tscn")
 
 
 var _level_scenes: Array = [
 	LEVEL_02,
 	LEVEL_03,
-	LEVEL_TEST_2
+	LEVEL_04,
+	LEVEL_05,
+	LEVEL_TEST_2,
 ]
 var _level_instances: Array
 var _current_level_index: int = 0

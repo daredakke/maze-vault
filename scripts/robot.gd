@@ -57,6 +57,7 @@ func take_control() -> void:
 
 
 func release_control() -> void:
+	animation_player.play("down_1")
 	is_controlled = false
 	_can_move_boxes = false
 
@@ -89,16 +90,17 @@ func _look_for_player() -> void:
 		
 		_collider = player_ray.get_collider()
 		
-		if _collider and _collider.is_in_group("obstacle"):
-			continue
-		
-		if _collider and _collider.is_in_group("player"):
-			_last_player_direction = directions[dir]
-			_move(_last_player_direction)
-			animation_player.play(dir + "_1")
-			_moving_to_target = true
-			_can_move_boxes = false
-			return
+		if _collider:
+			if _collider.is_in_group("obstacle"):
+				continue
+			
+			if _collider.is_in_group("player"):
+				_last_player_direction = directions[dir]
+				_move(_last_player_direction)
+				animation_player.play(dir + "_1")
+				_moving_to_target = true
+				_can_move_boxes = false
+				return
 
 
 func _move(dir: Vector2) -> void:
@@ -110,3 +112,8 @@ func _move(dir: Vector2) -> void:
 		if not is_controlled and collider.is_in_group("player"):
 			collider.destroy()
 			EventBus.level_reset.emit()
+			
+		if not is_controlled and collider is Robot:
+			animation_player.play("down_1")
+			destroy()
+			collider.destroy()

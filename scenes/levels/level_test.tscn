@@ -207,7 +207,6 @@ position = Vector2(112, 96)
 
 [node name="Robot" parent="Entities" instance=ExtResource("3_8bq0y")]
 position = Vector2(160, 112)
-is_player = false
 
 [node name="Boxes" type="Node2D" parent="."]
 
