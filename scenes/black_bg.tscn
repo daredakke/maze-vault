@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://dhbty1ajjnn6n"]
+
+[ext_resource type="Texture2D" uid="uid://cvtdjtmyenki0" path="res://assets/square-white-16.png" id="1_3rci3"]
+
+[node name="BlackBG" type="Sprite2D"]
+modulate = Color(0, 0, 0, 1)
+texture = ExtResource("1_3rci3")

@@ -6,6 +6,11 @@ var _wait_time: int = 2
 var _wait_count: int = 0
 
 @onready var stood_on_ray: RayCast2D = $StoodOnRay
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
+
+
+func _ready() -> void:
+	animation_player.play("flicker")
 
 
 func _process(_delta: float) -> void:

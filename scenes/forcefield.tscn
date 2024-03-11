@@ -1,7 +1,45 @@
-[gd_scene load_steps=3 format=3 uid="uid://de5osx7isgmvm"]
+[gd_scene load_steps=6 format=3 uid="uid://de5osx7isgmvm"]
 
 [ext_resource type="Script" path="res://scripts/forcefield.gd" id="1_45vd4"]
-[ext_resource type="Texture2D" uid="uid://cvtdjtmyenki0" path="res://assets/square-white-16.png" id="1_x4jdi"]
+[ext_resource type="Texture2D" uid="uid://cu021yr6p0o8g" path="res://assets/forcefield.png" id="2_nkgdp"]
+
+[sub_resource type="Animation" id="Animation_bje7v"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_q5jjo"]
+resource_name = "flicker"
+length = 3.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.8, 1.2, 1.6, 2, 2.4, 2.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qjav0"]
+_data = {
+"RESET": SubResource("Animation_bje7v"),
+"flicker": SubResource("Animation_q5jjo")
+}
 
 [node name="Forcefield" type="Node2D"]
 script = ExtResource("1_45vd4")
@@ -9,9 +47,15 @@ script = ExtResource("1_45vd4")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 modulate = Color(1, 0, 0, 0.490196)
 z_index = 50
-texture = ExtResource("1_x4jdi")
+texture = ExtResource("2_nkgdp")
+hframes = 8
 
 [node name="StoodOnRay" type="RayCast2D" parent="."]
 target_position = Vector2(0, 0)
 hit_from_inside = true
 collide_with_areas = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_qjav0")
+}

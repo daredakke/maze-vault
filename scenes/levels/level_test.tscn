@@ -10,10 +10,9 @@
 [ext_resource type="PackedScene" uid="uid://de5osx7isgmvm" path="res://scenes/forcefield.tscn" id="7_nk87r"]
 
 [node name="LevelTest" type="Node2D"]
+position = Vector2(0, 16)
 
 [node name="Walls" type="Node2D" parent="."]
-
-[node name="Wall10" parent="Walls" instance=ExtResource("1_cf2x5")]
 
 [node name="Wall11" parent="Walls" instance=ExtResource("1_cf2x5")]
 position = Vector2(16, 0)
@@ -72,134 +71,113 @@ position = Vector2(288, 0)
 [node name="Wall29" parent="Walls" instance=ExtResource("1_cf2x5")]
 position = Vector2(304, 0)
 
-[node name="Wall30" parent="Walls" instance=ExtResource("1_cf2x5")]
-position = Vector2(320, 0)
-
-[node name="Wall31" parent="Walls" instance=ExtResource("1_cf2x5")]
-position = Vector2(0, 176)
-
 [node name="Wall32" parent="Walls" instance=ExtResource("1_cf2x5")]
-position = Vector2(16, 176)
+position = Vector2(16, 144)
 
 [node name="Wall33" parent="Walls" instance=ExtResource("1_cf2x5")]
-position = Vector2(32, 176)
+position = Vector2(32, 144)
 
 [node name="Wall34" parent="Walls" instance=ExtResource("1_cf2x5")]
-position = Vector2(48, 176)
+position = Vector2(48, 144)
 
 [node name="Wall35" parent="Walls" instance=ExtResource("1_cf2x5")]
-position = Vector2(64, 176)
+position = Vector2(64, 144)
 
 [node name="Wall36" parent="Walls" instance=ExtResource("1_cf2x5")]
-position = Vector2(80, 176)
+position = Vector2(80, 144)
 
 [node name="Wall37" parent="Walls" instance=ExtResource("1_cf2x5")]
-position = Vector2(96, 176)
+position = Vector2(96, 144)
 
 [node name="Wall38" parent="Walls" instance=ExtResource("1_cf2x5")]
-position = Vector2(112, 176)
+position = Vector2(112, 144)
 
 [node name="Wall39" parent="Walls" instance=ExtResource("1_cf2x5")]
-position = Vector2(128, 176)
+position = Vector2(128, 144)
 
 [node name="Wall40" parent="Walls" instance=ExtResource("1_cf2x5")]
-position = Vector2(144, 176)
+position = Vector2(144, 144)
 
 [node name="Wall41" parent="Walls" instance=ExtResource("1_cf2x5")]
-position = Vector2(160, 176)
+position = Vector2(160, 144)
 
 [node name="Wall42" parent="Walls" instance=ExtResource("1_cf2x5")]
-position = Vector2(176, 176)
+position = Vector2(176, 144)
 
 [node name="Wall43" parent="Walls" instance=ExtResource("1_cf2x5")]
-position = Vector2(192, 176)
+position = Vector2(192, 144)
 
 [node name="Wall44" parent="Walls" instance=ExtResource("1_cf2x5")]
-position = Vector2(208, 176)
+position = Vector2(208, 144)
 
 [node name="Wall45" parent="Walls" instance=ExtResource("1_cf2x5")]
-position = Vector2(224, 176)
+position = Vector2(224, 144)
 
 [node name="Wall46" parent="Walls" instance=ExtResource("1_cf2x5")]
-position = Vector2(240, 176)
+position = Vector2(240, 144)
 
 [node name="Wall47" parent="Walls" instance=ExtResource("1_cf2x5")]
-position = Vector2(256, 176)
+position = Vector2(256, 144)
 
 [node name="Wall48" parent="Walls" instance=ExtResource("1_cf2x5")]
-position = Vector2(272, 176)
+position = Vector2(272, 144)
 
 [node name="Wall49" parent="Walls" instance=ExtResource("1_cf2x5")]
-position = Vector2(288, 176)
+position = Vector2(288, 144)
 
 [node name="Wall50" parent="Walls" instance=ExtResource("1_cf2x5")]
-position = Vector2(304, 176)
-
-[node name="Wall51" parent="Walls" instance=ExtResource("1_cf2x5")]
-position = Vector2(320, 176)
-
-[node name="Wall52" parent="Walls" instance=ExtResource("1_cf2x5")]
-position = Vector2(320, 160)
-
-[node name="Wall53" parent="Walls" instance=ExtResource("1_cf2x5")]
-position = Vector2(320, 144)
+position = Vector2(304, 144)
 
 [node name="Wall54" parent="Walls" instance=ExtResource("1_cf2x5")]
-position = Vector2(320, 128)
+position = Vector2(304, 128)
 
 [node name="Wall55" parent="Walls" instance=ExtResource("1_cf2x5")]
-position = Vector2(320, 112)
+position = Vector2(304, 112)
 
 [node name="Wall56" parent="Walls" instance=ExtResource("1_cf2x5")]
-position = Vector2(320, 96)
+position = Vector2(304, 96)
 
 [node name="Wall57" parent="Walls" instance=ExtResource("1_cf2x5")]
-position = Vector2(320, 80)
+position = Vector2(304, 80)
 
 [node name="Wall58" parent="Walls" instance=ExtResource("1_cf2x5")]
-position = Vector2(320, 64)
-
-[node name="Wall59" parent="Walls" instance=ExtResource("1_cf2x5")]
-position = Vector2(0, 160)
-
-[node name="Wall60" parent="Walls" instance=ExtResource("1_cf2x5")]
-position = Vector2(0, 144)
+position = Vector2(304, 64)
 
 [node name="Wall61" parent="Walls" instance=ExtResource("1_cf2x5")]
-position = Vector2(0, 128)
+position = Vector2(16, 128)
 
 [node name="Wall62" parent="Walls" instance=ExtResource("1_cf2x5")]
-position = Vector2(0, 112)
+position = Vector2(16, 112)
 
 [node name="Wall63" parent="Walls" instance=ExtResource("1_cf2x5")]
-position = Vector2(0, 96)
+position = Vector2(16, 96)
 
 [node name="Wall64" parent="Walls" instance=ExtResource("1_cf2x5")]
-position = Vector2(0, 80)
+position = Vector2(16, 80)
 
 [node name="Wall65" parent="Walls" instance=ExtResource("1_cf2x5")]
-position = Vector2(0, 64)
+position = Vector2(16, 64)
 
 [node name="Wall66" parent="Walls" instance=ExtResource("1_cf2x5")]
-position = Vector2(0, 48)
+position = Vector2(16, 48)
 
 [node name="Wall71" parent="Walls" instance=ExtResource("1_cf2x5")]
-position = Vector2(0, 32)
+position = Vector2(16, 32)
 
 [node name="Wall67" parent="Walls" instance=ExtResource("1_cf2x5")]
-position = Vector2(320, 48)
+position = Vector2(304, 48)
 
 [node name="Wall68" parent="Walls" instance=ExtResource("1_cf2x5")]
-position = Vector2(320, 32)
+position = Vector2(304, 32)
 
 [node name="Wall69" parent="Walls" instance=ExtResource("1_cf2x5")]
-position = Vector2(320, 16)
+position = Vector2(304, 16)
 
 [node name="Wall73" parent="Walls" instance=ExtResource("1_cf2x5")]
-position = Vector2(192, 64)
+position = Vector2(208, 32)
 
 [node name="Wall74" parent="Walls" instance=ExtResource("1_cf2x5")]
-position = Vector2(192, 48)
+position = Vector2(272, 96)
 
 [node name="Wall75" parent="Walls" instance=ExtResource("1_cf2x5")]
 position = Vector2(192, 32)
@@ -208,10 +186,10 @@ position = Vector2(192, 32)
 position = Vector2(192, 16)
 
 [node name="Wall77" parent="Walls" instance=ExtResource("1_cf2x5")]
-position = Vector2(192, 160)
+position = Vector2(176, 16)
 
 [node name="Wall78" parent="Walls" instance=ExtResource("1_cf2x5")]
-position = Vector2(192, 144)
+position = Vector2(240, 96)
 
 [node name="Wall79" parent="Walls" instance=ExtResource("1_cf2x5")]
 position = Vector2(192, 128)
@@ -220,27 +198,26 @@ position = Vector2(192, 128)
 position = Vector2(192, 112)
 
 [node name="Wall70" parent="Walls" instance=ExtResource("1_cf2x5")]
-position = Vector2(0, 16)
+position = Vector2(16, 16)
 
 [node name="Entities" type="Node2D" parent="."]
 
 [node name="Player" parent="Entities" instance=ExtResource("2_pv4xi")]
-position = Vector2(112, 112)
+position = Vector2(112, 96)
 
 [node name="Robot" parent="Entities" instance=ExtResource("3_8bq0y")]
-position = Vector2(160, 144)
-is_player = null
+position = Vector2(160, 112)
 
 [node name="Boxes" type="Node2D" parent="."]
 
 [node name="Box2" parent="Boxes" instance=ExtResource("4_6qvdd")]
-position = Vector2(128, 16)
+position = Vector2(128, 32)
 
 [node name="Box" parent="Boxes" instance=ExtResource("4_6qvdd")]
-position = Vector2(208, 128)
+position = Vector2(208, 96)
 
 [node name="Box3" parent="Boxes" node_paths=PackedStringArray("collision_box") instance=ExtResource("4_6qvdd")]
-position = Vector2(208, 112)
+position = Vector2(208, 80)
 collision_box = NodePath("../Box/CollisionShape2D")
 
 [node name="Interactables" type="Node2D" parent="."]
@@ -250,26 +227,26 @@ position = Vector2(48, 80)
 buttons = [NodePath("../FloorButton"), NodePath("../FloorButton2")]
 
 [node name="FloorButton" parent="Interactables" instance=ExtResource("5_fvb3e")]
-position = Vector2(160, 16)
+position = Vector2(160, 32)
 
 [node name="FloorButton2" parent="Interactables" instance=ExtResource("5_fvb3e")]
-position = Vector2(208, 144)
+position = Vector2(208, 112)
 
 [node name="Floor" type="Node2D" parent="."]
 
 [node name="Forcefield" parent="Floor" instance=ExtResource("7_nk87r")]
-position = Vector2(192, 80)
+position = Vector2(192, 48)
 
 [node name="Forcefield2" parent="Floor" instance=ExtResource("7_nk87r")]
-position = Vector2(192, 96)
+position = Vector2(192, 64)
 
 [node name="Void" parent="Floor" instance=ExtResource("5_hcod0")]
-position = Vector2(208, 80)
+position = Vector2(208, 48)
 is_one_step_tile = true
 
 [node name="Void2" parent="Floor" instance=ExtResource("5_hcod0")]
-position = Vector2(208, 96)
+position = Vector2(208, 64)
 is_one_step_tile = true
 
 [node name="Void3" parent="Floor" instance=ExtResource("5_hcod0")]
-position = Vector2(208, 160)
+position = Vector2(208, 128)

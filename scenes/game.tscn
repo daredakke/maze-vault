@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://2ebxoees0r32"]
+[gd_scene load_steps=8 format=3 uid="uid://2ebxoees0r32"]
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_f6l8u"]
 [ext_resource type="PackedScene" uid="uid://ccqqq3oltseh7" path="res://scenes/splash.tscn" id="2_3wpsm"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dhcf22jtoctn0" path="res://scenes/pause.tscn" id="3_jsbi5"]
 [ext_resource type="Texture2D" uid="uid://q64fopn2ht18" path="res://assets/tiled-grid.png" id="5_d5hoy"]
 [ext_resource type="Script" path="res://scripts/level.gd" id="5_hhteu"]
+[ext_resource type="PackedScene" uid="uid://dhbty1ajjnn6n" path="res://scenes/black_bg.tscn" id="6_07hmh"]
 
 [node name="Game" type="Node2D"]
 process_mode = 3
@@ -37,6 +38,11 @@ centered = false
 [node name="Level" type="Node2D" parent="."]
 unique_name_in_owner = true
 script = ExtResource("5_hhteu")
+
+[node name="BlackBG" parent="Level" instance=ExtResource("6_07hmh")]
+z_index = -20
+position = Vector2(160, 88)
+scale = Vector2(22, 13)
 
 [node name="TiledGrid" type="Sprite2D" parent="Level"]
 z_index = -10

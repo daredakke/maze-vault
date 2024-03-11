@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://c7kakktkoxqv4"]
+[gd_scene load_steps=9 format=3 uid="uid://c7kakktkoxqv4"]
 
 [ext_resource type="PackedScene" uid="uid://bh36j4ina3tjr" path="res://scenes/wall.tscn" id="1_h7gn8"]
 [ext_resource type="PackedScene" uid="uid://ciaf6xdrrx2v4" path="res://scenes/player.tscn" id="2_ljylc"]
@@ -7,30 +7,11 @@
 [ext_resource type="PackedScene" uid="uid://ddx07vxha00k4" path="res://scenes/teleporter.tscn" id="5_60ljc"]
 [ext_resource type="PackedScene" uid="uid://kohl4tehhnkq" path="res://scenes/floor_button.tscn" id="6_7ns8e"]
 [ext_resource type="PackedScene" uid="uid://315w6n1us2nl" path="res://scenes/void.tscn" id="7_f5fjj"]
+[ext_resource type="PackedScene" uid="uid://dhbty1ajjnn6n" path="res://scenes/black_bg.tscn" id="8_d5l4j"]
 
 [node name="LevelTest2" type="Node2D"]
 
 [node name="Walls" type="Node2D" parent="."]
-
-[node name="Wall" parent="Walls" instance=ExtResource("1_h7gn8")]
-position = Vector2(272, 112)
-scale = Vector2(11, 7)
-
-[node name="Wall2" parent="Walls" instance=ExtResource("1_h7gn8")]
-position = Vector2(0, 80)
-scale = Vector2(5, 13)
-
-[node name="Wall3" parent="Walls" instance=ExtResource("1_h7gn8")]
-position = Vector2(320, 80)
-scale = Vector2(7, 13)
-
-[node name="Wall5" parent="Walls" instance=ExtResource("1_h7gn8")]
-position = Vector2(128, 192)
-scale = Vector2(20, 3)
-
-[node name="Wall49" parent="Walls" instance=ExtResource("1_h7gn8")]
-position = Vector2(144, -16)
-scale = Vector2(20, 3)
 
 [node name="Wall4" parent="Walls" instance=ExtResource("1_h7gn8")]
 position = Vector2(256, 16)
@@ -171,7 +152,6 @@ position = Vector2(112, 128)
 
 [node name="Robot" parent="Entities" instance=ExtResource("3_3ipq1")]
 position = Vector2(240, 32)
-is_player = null
 
 [node name="Boxes" type="Node2D" parent="."]
 
@@ -212,3 +192,17 @@ position = Vector2(144, 144)
 
 [node name="Void2" parent="Floor" instance=ExtResource("7_f5fjj")]
 position = Vector2(144, 48)
+
+[node name="BG" type="Node2D" parent="."]
+
+[node name="BlackBG" parent="BG" instance=ExtResource("8_d5l4j")]
+position = Vector2(24, 88)
+scale = Vector2(3, 11)
+
+[node name="BlackBG2" parent="BG" instance=ExtResource("8_d5l4j")]
+position = Vector2(248, 109)
+scale = Vector2(9, 8.375)
+
+[node name="BlackBG4" parent="BG" instance=ExtResource("8_d5l4j")]
+position = Vector2(288, 24)
+scale = Vector2(4, 3)
