@@ -41,14 +41,8 @@ position = Vector2(144, 80)
 [node name="Wall10" parent="Walls" instance=ExtResource("1_1gmbk")]
 position = Vector2(224, 96)
 
-[node name="Wall11" parent="Walls" instance=ExtResource("1_1gmbk")]
-position = Vector2(224, 112)
-
 [node name="Wall12" parent="Walls" instance=ExtResource("1_1gmbk")]
-position = Vector2(240, 112)
-
-[node name="Wall13" parent="Walls" instance=ExtResource("1_1gmbk")]
-position = Vector2(256, 112)
+position = Vector2(240, 96)
 
 [node name="Wall14" parent="Walls" instance=ExtResource("1_1gmbk")]
 position = Vector2(256, 96)
@@ -139,11 +133,11 @@ position = Vector2(224, 64)
 [node name="Interactables" type="Node2D" parent="."]
 
 [node name="Teleporter" parent="Interactables" node_paths=PackedStringArray("buttons") instance=ExtResource("4_y8xjd")]
-position = Vector2(128, 96)
+position = Vector2(128, 112)
 buttons = [NodePath("../FloorButton")]
 
 [node name="FloorButton" parent="Interactables" instance=ExtResource("5_1wubl")]
-position = Vector2(240, 96)
+position = Vector2(240, 80)
 
 [node name="BG" type="Node2D" parent="."]
 
@@ -160,8 +154,8 @@ position = Vector2(128, 152)
 scale = Vector2(4, 3)
 
 [node name="BlackBG4" parent="BG" instance=ExtResource("6_7enlg")]
-position = Vector2(272, 144)
-scale = Vector2(6, 4)
+position = Vector2(272, 136)
+scale = Vector2(6, 5)
 
 [node name="BlackBG5" parent="BG" instance=ExtResource("6_7enlg")]
 position = Vector2(288, 88)
