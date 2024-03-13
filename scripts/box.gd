@@ -36,6 +36,7 @@ func move(dir: Vector2) -> bool:
 	
 	if not collision_ray.is_colliding():
 		position += dir * GRID_SIZE
+		EventBus.box_moved.emit()
 		return true
 	
 	return false

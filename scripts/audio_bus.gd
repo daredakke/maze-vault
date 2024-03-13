@@ -17,6 +17,20 @@ extends Node
 @onready var button_released_sfx: AudioStreamPlayer = $ButtonReleasedSFX
 
 
+func _ready() -> void:
+	EventBus.level_reset.connect(play_level_reset)
+	EventBus.player_reached_exit.connect(play_teleported)
+	EventBus.player_died.connect(play_player_death)
+	EventBus.robot_died.connect(play_robot_death)
+	EventBus.box_moved.connect(play_box_move)
+	EventBus.button_pressed.connect(play_button_pressed)
+	EventBus.button_released.connect(play_button_released)
+	EventBus.teleporter_activated.connect(play_teleporter_activated)
+	EventBus.teleporter_deactivated.connect(play_teleporter_deactivated)
+	EventBus.shot_fired.connect(play_shot_fired)
+	EventBus.robot_released.connect(play_robot_released)
+
+
 func play_menu_selected() -> void:
 	menu_select_sfx.play()
 

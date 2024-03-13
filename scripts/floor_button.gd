@@ -14,6 +14,7 @@ var is_pressed: bool = false:
 var _wait_time: int = 6
 var _wait_count: int = 0
 var _delay_check: bool = false
+var _was_pressed_last_check: bool = false
 
 @onready var sprite: Sprite2D = $Sprite2D
 @onready var pressed_ray: RayCast2D = $PressedRay
@@ -49,5 +50,13 @@ func _check_if_pressed() -> void:
 	
 	if pressed_ray.is_colliding():
 		is_pressed = true
+		
+		if not _was_pressed_last_check:
+			EventBus.button_pressed.emit()
+			_was_pressed_last_check = true
 	else:
 		is_pressed = false
+		
+		if _was_pressed_last_check:
+			EventBus.button_released.emit()
+			_was_pressed_last_check = false

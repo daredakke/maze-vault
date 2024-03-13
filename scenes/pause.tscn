@@ -188,7 +188,7 @@ unique_name_in_owner = true
 layout_mode = 2
 text = "100%"
 
-[node name="SFXSlider" type="HSlider" parent="SettingsPanel/Margin/ControlsVBox/VolumeHBox/SFXVBox"]
+[node name="SFXSlider" type="HSlider" parent="SettingsPanel/Margin/ControlsVBox/VolumeHBox/SFXVBox" groups=["sfx_slider"]]
 unique_name_in_owner = true
 layout_mode = 2
 focus_neighbor_top = NodePath("../../MusicVBox/MusicSlider")

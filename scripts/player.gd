@@ -36,11 +36,18 @@ func reset() -> void:
 	_robot_possessed = null
 
 
+func destroy() -> void:
+	super.destroy()
+	
+	EventBus.player_died.emit()
+
+
 func _fire_ray() -> void:
 	if _robot_possessed:
 		_robot_possessed.animation_player.play("down_1")
 		_robot_possessed.release_control()
 		_robot_possessed = null
+		EventBus.robot_released.emit()
 		return
 	
 	shoot_ray.target_position = _last_direction * (GRID_SIZE * 20)
@@ -52,6 +59,7 @@ func _fire_ray() -> void:
 	projectile.set_point_position(1, pos)
 	cooldown.start()
 	projectile_reset.start()
+	EventBus.shot_fired.emit()
 	
 	if collider is Robot:
 		collider.take_control()

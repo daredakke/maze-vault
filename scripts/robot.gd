@@ -58,6 +58,12 @@ func reset() -> void:
 	_moving_to_target = false
 
 
+func destroy() -> void:
+	super.destroy()
+	
+	EventBus.robot_died.emit()
+
+
 func take_control() -> void:
 	is_controlled = true
 	_moving_to_target = false
