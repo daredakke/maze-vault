@@ -228,6 +228,14 @@ is_one_step_tile = true
 position = Vector2(144, 64)
 is_one_step_tile = true
 
+[node name="Void15" parent="Floor" instance=ExtResource("6_ksxpc")]
+position = Vector2(176, 64)
+is_one_step_tile = true
+
+[node name="Void16" parent="Floor" instance=ExtResource("6_ksxpc")]
+position = Vector2(176, 80)
+is_one_step_tile = true
+
 [node name="Void6" parent="Floor" instance=ExtResource("6_ksxpc")]
 position = Vector2(160, 64)
 

@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://2ebxoees0r32"]
+[gd_scene load_steps=9 format=3 uid="uid://2ebxoees0r32"]
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_f6l8u"]
+[ext_resource type="PackedScene" uid="uid://b1icoukkbev5p" path="res://scenes/audio_bus.tscn" id="2_0w4l8"]
 [ext_resource type="PackedScene" uid="uid://ccqqq3oltseh7" path="res://scenes/splash.tscn" id="2_3wpsm"]
 [ext_resource type="Texture2D" uid="uid://douco27nrymbp" path="res://assets/scanlines-320-180.png" id="3_ct4n6"]
 [ext_resource type="PackedScene" uid="uid://dhcf22jtoctn0" path="res://scenes/pause.tscn" id="3_jsbi5"]
@@ -11,6 +12,8 @@
 [node name="Game" type="Node2D"]
 process_mode = 3
 script = ExtResource("1_f6l8u")
+
+[node name="AudioBus" parent="." instance=ExtResource("2_0w4l8")]
 
 [node name="Camera" type="Camera2D" parent="."]
 anchor_mode = 0
