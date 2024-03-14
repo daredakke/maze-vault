@@ -36,12 +36,10 @@ bus = &"SFX"
 
 [node name="MenuHoverSFX" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_f6iyx")
-max_polyphony = 6
 bus = &"SFX"
 
 [node name="MenuSelectSFX" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_u5rea")
-max_polyphony = 6
 bus = &"SFX"
 
 [node name="LevelResetSFX" type="AudioStreamPlayer" parent="."]

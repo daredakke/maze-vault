@@ -1,6 +1,7 @@
 extends Node
 
 
+signal game_started
 signal player_moved
 signal level_reset
 signal player_reached_exit

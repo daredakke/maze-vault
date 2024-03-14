@@ -38,10 +38,12 @@ func _process(_delta: float) -> void:
 
 func _connect_button_sfx(node: Node) -> void:
 	if node is Button:
+		node.focus_entered.connect(_menu_hovered)
 		node.mouse_entered.connect(_menu_hovered)
 		node.pressed.connect(_menu_selected)
 	
 	if node is HSlider:
+		node.focus_entered.connect(_menu_hovered)
 		node.mouse_entered.connect(_menu_hovered)
 		
 	if node.is_in_group("sfx_slider"):
@@ -50,6 +52,7 @@ func _connect_button_sfx(node: Node) -> void:
 
 func _start_game() -> void:
 	Global.game_started = true
+	EventBus.game_started.emit()
 	
 	_unpause_game()
 
@@ -84,3 +87,4 @@ func _menu_selected() -> void:
 
 func _sfx_slider_drag_ended(_value_changed: float) -> void:
 	audio_bus.play_menu_selected()
+

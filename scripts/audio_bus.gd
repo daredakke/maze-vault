@@ -36,7 +36,7 @@ func play_menu_selected() -> void:
 
 
 func play_menu_hovered() -> void:
-	if not menu_select_sfx.playing:
+	if not menu_select_sfx.playing and not menu_hover_sfx.playing:
 		menu_hover_sfx.play()
 
 
