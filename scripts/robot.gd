@@ -28,6 +28,7 @@ func _ready() -> void:
 	animation_player.play("down_1")
 	collision_with_obstacle.connect(_end_search)
 	EventBus.player_moved.connect(_delay_search)
+	EventBus.level_reset.connect(reset)
 	search_delay.timeout.connect(_look_for_player)
 
 
@@ -53,6 +54,7 @@ func reset() -> void:
 	
 	animation_player.play("down_1")
 	search_delay.stop()
+	_last_player_direction = Vector2.DOWN
 	_can_move_boxes = true
 	is_controlled = false
 	_moving_to_target = false
@@ -60,7 +62,7 @@ func reset() -> void:
 
 func destroy() -> void:
 	super.destroy()
-	
+
 	EventBus.robot_died.emit()
 
 

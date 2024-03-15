@@ -24,8 +24,6 @@ var _last_direction := Vector2.DOWN
 
 
 func _ready() -> void:
-	EventBus.level_reset.connect(reset)
-	
 	_starting_position = global_position
 
 

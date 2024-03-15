@@ -8,6 +8,7 @@ const END_FOUR: PackedScene = preload("res://scenes/cutscenes/end_four.tscn")
 const END_SIX: PackedScene = preload("res://scenes/cutscenes/end_six.tscn")
 const END_THREE: PackedScene = preload("res://scenes/cutscenes/end_three.tscn")
 const END_TWO: PackedScene = preload("res://scenes/cutscenes/end_two.tscn")
+const PITS = preload("res://scenes/cutscenes/pits.tscn")
 const FLOOR = preload("res://scenes/cutscenes/floor.tscn")
 const FORCEFIELDS = preload("res://scenes/cutscenes/forcefields.tscn")
 const INTRO: PackedScene = preload("res://scenes/cutscenes/intro.tscn")
@@ -28,6 +29,7 @@ const LEVEL_04: PackedScene = preload("res://scenes/levels/level_04.tscn")
 const LEVEL_04b: PackedScene = preload("res://scenes/levels/level_04b.tscn")
 const LEVEL_05: PackedScene = preload("res://scenes/levels/level_05.tscn")
 const LEVEL_06: PackedScene = preload("res://scenes/levels/level_06.tscn")
+const LEVEL_06b: PackedScene = preload("res://scenes/levels/level_06b.tscn")
 const LEVEL_07: PackedScene = preload("res://scenes/levels/level_07.tscn")
 const LEVEL_08: PackedScene = preload("res://scenes/levels/level_08.tscn")
 
@@ -46,11 +48,13 @@ var _level_scenes: Array = [
 	LEVEL_04,
 	LEVEL_04b,
 	LEVEL_05,
-	LEVEL_06,
-	FLOOR,
-	FORCEFIELDS,
-	LEVEL_08,
+	PITS,
 	LEVEL_TEST_2,
+	FLOOR,
+	LEVEL_06,
+	LEVEL_06b,
+	LEVEL_08,
+	FORCEFIELDS,
 	LEVEL_07,
 ]
 var _level_instances: Array

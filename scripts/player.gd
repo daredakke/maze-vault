@@ -13,6 +13,7 @@ var _robot_possessed
 
 func _ready() -> void:
 	super._ready()
+	EventBus.level_reset.connect(reset)
 	
 	animation_player.play("down")
 	projectile.set_point_position(0, Vector2.ZERO)
