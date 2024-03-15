@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://d34rnvg2ecchb"]
+[gd_scene load_steps=10 format=3 uid="uid://d34rnvg2ecchb"]
 
 [ext_resource type="PackedScene" uid="uid://bh36j4ina3tjr" path="res://scenes/wall.tscn" id="1_5xbdx"]
+[ext_resource type="Texture2D" uid="uid://q64fopn2ht18" path="res://assets/tiled-grid.png" id="1_j5dlk"]
 [ext_resource type="PackedScene" uid="uid://dhbty1ajjnn6n" path="res://scenes/black_bg.tscn" id="1_qaug8"]
 [ext_resource type="PackedScene" uid="uid://ciaf6xdrrx2v4" path="res://scenes/player.tscn" id="2_wlsa4"]
 [ext_resource type="PackedScene" uid="uid://c2uip3188o5lx" path="res://scenes/robot.tscn" id="3_inwld"]
@@ -10,6 +11,13 @@
 [ext_resource type="PackedScene" uid="uid://315w6n1us2nl" path="res://scenes/void.tscn" id="7_rma52"]
 
 [node name="Level06" type="Node2D"]
+
+[node name="TiledGrid" type="Sprite2D" parent="."]
+z_index = -10
+texture = ExtResource("1_j5dlk")
+centered = false
+offset = Vector2(8, 8)
+metadata/_edit_lock_ = true
 
 [node name="BG" type="Node2D" parent="."]
 

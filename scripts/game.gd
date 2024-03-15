@@ -31,9 +31,6 @@ func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("reset"):
 		EventBus.level_reset.emit()
 		return
-	
-	if Input.is_action_just_pressed("TEST_next_level"):
-		level.next_level()
 
 
 func _connect_button_sfx(node: Node) -> void:

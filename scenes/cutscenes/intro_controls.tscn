@@ -1,0 +1,50 @@
+[gd_scene load_steps=3 format=3 uid="uid://b48awpskoy63f"]
+
+[ext_resource type="Theme" uid="uid://cvqshv3af3mlx" path="res://resources/custom.tres" id="1_3og1s"]
+[ext_resource type="PackedScene" uid="uid://b65fqkggqqg0u" path="res://scenes/z_skip.tscn" id="2_5bm3d"]
+
+[node name="IntroControls" type="Control"]
+custom_minimum_size = Vector2(320, 176)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 320.0
+offset_bottom = 176.0
+theme = ExtResource("1_3og1s")
+
+[node name="ZSkip" parent="." instance=ExtResource("2_5bm3d")]
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Margin" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 6
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 16
+
+[node name="BodyLabel" type="Label" parent="Margin"]
+layout_mode = 2
+theme_override_constants/line_spacing = -2
+text = "MAKE SURE YOU DON'T FORGET
+THE BASICS.
+
+MOVE WITH THE ARROW KEYS AND
+PRESS ESCAPE IF YOU NEED TO 
+CHANGE ANY SETTINGS."
+
+[node name="ZLabel" type="Label" parent="Margin"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+text = "Z ->"

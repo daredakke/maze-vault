@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://dtixxrocq748g"]
+[gd_scene load_steps=10 format=3 uid="uid://dtixxrocq748g"]
 
 [ext_resource type="PackedScene" uid="uid://bh36j4ina3tjr" path="res://scenes/wall.tscn" id="1_cf2x5"]
+[ext_resource type="Texture2D" uid="uid://q64fopn2ht18" path="res://assets/tiled-grid.png" id="1_eld6g"]
 [ext_resource type="PackedScene" uid="uid://ciaf6xdrrx2v4" path="res://scenes/player.tscn" id="2_pv4xi"]
 [ext_resource type="PackedScene" uid="uid://c2uip3188o5lx" path="res://scenes/robot.tscn" id="3_8bq0y"]
 [ext_resource type="PackedScene" uid="uid://dop7wr7kmcvdl" path="res://scenes/box.tscn" id="4_6qvdd"]
@@ -11,6 +12,13 @@
 
 [node name="LevelTest" type="Node2D"]
 position = Vector2(0, 16)
+
+[node name="TiledGrid" type="Sprite2D" parent="."]
+z_index = -10
+texture = ExtResource("1_eld6g")
+centered = false
+offset = Vector2(8, 8)
+metadata/_edit_lock_ = true
 
 [node name="Walls" type="Node2D" parent="."]
 
