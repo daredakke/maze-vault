@@ -25,6 +25,7 @@ const LEVEL_TEST_2: PackedScene = preload("res://scenes/levels/level_test_2.tscn
 const LEVEL_02: PackedScene = preload("res://scenes/levels/level_02.tscn")
 const LEVEL_02b: PackedScene = preload("res://scenes/levels/level_02b.tscn")
 const LEVEL_03: PackedScene = preload("res://scenes/levels/level_03.tscn")
+const LEVEL_03b: PackedScene = preload("res://scenes/levels/level_03b.tscn")
 const LEVEL_04: PackedScene = preload("res://scenes/levels/level_04.tscn")
 const LEVEL_04b: PackedScene = preload("res://scenes/levels/level_04b.tscn")
 const LEVEL_05: PackedScene = preload("res://scenes/levels/level_05.tscn")
@@ -48,6 +49,7 @@ var _level_scenes: Array = [
 	LEVEL_02b,
 	ROBOTS,
 	LEVEL_03,
+	LEVEL_03b,
 	POSSESSOR,
 	POSSESSOR_TWO,
 	LEVEL_04,

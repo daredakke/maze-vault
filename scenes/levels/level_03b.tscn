@@ -1,0 +1,194 @@
+[gd_scene load_steps=8 format=3 uid="uid://b1sqoly1o2rq"]
+
+[ext_resource type="Texture2D" uid="uid://q64fopn2ht18" path="res://assets/tiled-grid.png" id="1_erqh8"]
+[ext_resource type="PackedScene" uid="uid://dhbty1ajjnn6n" path="res://scenes/black_bg.tscn" id="2_7cn6i"]
+[ext_resource type="PackedScene" uid="uid://ciaf6xdrrx2v4" path="res://scenes/player.tscn" id="2_actvl"]
+[ext_resource type="PackedScene" uid="uid://bh36j4ina3tjr" path="res://scenes/wall.tscn" id="2_t8w2w"]
+[ext_resource type="PackedScene" uid="uid://c2uip3188o5lx" path="res://scenes/robot.tscn" id="3_e8kvw"]
+[ext_resource type="PackedScene" uid="uid://ddx07vxha00k4" path="res://scenes/teleporter.tscn" id="4_wgprx"]
+[ext_resource type="PackedScene" uid="uid://kohl4tehhnkq" path="res://scenes/floor_button.tscn" id="5_0f3yq"]
+
+[node name="Level01" type="Node2D"]
+
+[node name="TiledGrid" type="Sprite2D" parent="."]
+z_index = -10
+texture = ExtResource("1_erqh8")
+centered = false
+offset = Vector2(8, 8)
+metadata/_edit_lock_ = true
+
+[node name="BG" type="Node2D" parent="."]
+
+[node name="BlackBG" parent="BG" instance=ExtResource("2_7cn6i")]
+position = Vector2(40, 88)
+scale = Vector2(5, 11)
+
+[node name="BlackBG2" parent="BG" instance=ExtResource("2_7cn6i")]
+position = Vector2(48, 128)
+scale = Vector2(6, 6)
+
+[node name="BlackBG3" parent="BG" instance=ExtResource("2_7cn6i")]
+position = Vector2(88, 152)
+scale = Vector2(11, 3)
+
+[node name="BlackBG4" parent="BG" instance=ExtResource("2_7cn6i")]
+position = Vector2(160, 160)
+scale = Vector2(20, 2)
+
+[node name="BlackBG5" parent="BG" instance=ExtResource("2_7cn6i")]
+position = Vector2(280, 88)
+scale = Vector2(5, 11)
+
+[node name="BlackBG6" parent="BG" instance=ExtResource("2_7cn6i")]
+position = Vector2(160, 24)
+scale = Vector2(20, 3)
+
+[node name="Walls" type="Node2D" parent="."]
+
+[node name="Wall" parent="Walls" instance=ExtResource("2_t8w2w")]
+position = Vector2(96, 96)
+
+[node name="Wall2" parent="Walls" instance=ExtResource("2_t8w2w")]
+position = Vector2(96, 112)
+
+[node name="Wall3" parent="Walls" instance=ExtResource("2_t8w2w")]
+position = Vector2(128, 128)
+
+[node name="Wall11" parent="Walls" instance=ExtResource("2_t8w2w")]
+position = Vector2(112, 128)
+
+[node name="Wall4" parent="Walls" instance=ExtResource("2_t8w2w")]
+position = Vector2(96, 128)
+
+[node name="Wall5" parent="Walls" instance=ExtResource("2_t8w2w")]
+position = Vector2(144, 128)
+
+[node name="Wall6" parent="Walls" instance=ExtResource("2_t8w2w")]
+position = Vector2(176, 128)
+
+[node name="Wall7" parent="Walls" instance=ExtResource("2_t8w2w")]
+position = Vector2(160, 128)
+
+[node name="Wall8" parent="Walls" instance=ExtResource("2_t8w2w")]
+position = Vector2(176, 112)
+
+[node name="Wall9" parent="Walls" instance=ExtResource("2_t8w2w")]
+position = Vector2(208, 112)
+
+[node name="Wall10" parent="Walls" instance=ExtResource("2_t8w2w")]
+position = Vector2(192, 112)
+
+[node name="Wall18" parent="Walls" instance=ExtResource("2_t8w2w")]
+position = Vector2(176, 80)
+
+[node name="Wall36" parent="Walls" instance=ExtResource("2_t8w2w")]
+position = Vector2(144, 80)
+
+[node name="Wall48" parent="Walls" instance=ExtResource("2_t8w2w")]
+position = Vector2(128, 80)
+
+[node name="Wall19" parent="Walls" instance=ExtResource("2_t8w2w")]
+position = Vector2(96, 80)
+
+[node name="Wall32" parent="Walls" instance=ExtResource("2_t8w2w")]
+position = Vector2(80, 64)
+
+[node name="Wall33" parent="Walls" instance=ExtResource("2_t8w2w")]
+position = Vector2(80, 80)
+
+[node name="Wall34" parent="Walls" instance=ExtResource("2_t8w2w")]
+position = Vector2(80, 48)
+
+[node name="Wall35" parent="Walls" instance=ExtResource("2_t8w2w")]
+position = Vector2(96, 48)
+
+[node name="Wall37" parent="Walls" instance=ExtResource("2_t8w2w")]
+position = Vector2(128, 48)
+
+[node name="Wall45" parent="Walls" instance=ExtResource("2_t8w2w")]
+position = Vector2(112, 48)
+
+[node name="Wall38" parent="Walls" instance=ExtResource("2_t8w2w")]
+position = Vector2(144, 48)
+
+[node name="Wall39" parent="Walls" instance=ExtResource("2_t8w2w")]
+position = Vector2(160, 48)
+
+[node name="Wall40" parent="Walls" instance=ExtResource("2_t8w2w")]
+position = Vector2(176, 48)
+
+[node name="Wall41" parent="Walls" instance=ExtResource("2_t8w2w")]
+position = Vector2(192, 48)
+
+[node name="Wall42" parent="Walls" instance=ExtResource("2_t8w2w")]
+position = Vector2(208, 48)
+
+[node name="Wall43" parent="Walls" instance=ExtResource("2_t8w2w")]
+position = Vector2(224, 48)
+
+[node name="Wall44" parent="Walls" instance=ExtResource("2_t8w2w")]
+position = Vector2(240, 48)
+
+[node name="Wall20" parent="Walls" instance=ExtResource("2_t8w2w")]
+position = Vector2(192, 80)
+
+[node name="Wall22" parent="Walls" instance=ExtResource("2_t8w2w")]
+position = Vector2(208, 80)
+
+[node name="Wall31" parent="Walls" instance=ExtResource("2_t8w2w")]
+position = Vector2(208, 96)
+
+[node name="Wall14" parent="Walls" instance=ExtResource("2_t8w2w")]
+position = Vector2(240, 80)
+
+[node name="Wall46" parent="Walls" instance=ExtResource("2_t8w2w")]
+position = Vector2(240, 64)
+
+[node name="Wall15" parent="Walls" instance=ExtResource("2_t8w2w")]
+position = Vector2(240, 128)
+
+[node name="Wall23" parent="Walls" instance=ExtResource("2_t8w2w")]
+position = Vector2(240, 144)
+
+[node name="Wall24" parent="Walls" instance=ExtResource("2_t8w2w")]
+position = Vector2(224, 144)
+
+[node name="Wall28" parent="Walls" instance=ExtResource("2_t8w2w")]
+position = Vector2(208, 144)
+
+[node name="Wall29" parent="Walls" instance=ExtResource("2_t8w2w")]
+position = Vector2(192, 144)
+
+[node name="Wall30" parent="Walls" instance=ExtResource("2_t8w2w")]
+position = Vector2(176, 144)
+
+[node name="Wall27" parent="Walls" instance=ExtResource("2_t8w2w")]
+position = Vector2(240, 96)
+
+[node name="Wall47" parent="Walls" instance=ExtResource("2_t8w2w")]
+position = Vector2(240, 112)
+
+[node name="Entities" type="Node2D" parent="."]
+
+[node name="Player" parent="Entities" instance=ExtResource("2_actvl")]
+position = Vector2(128, 112)
+
+[node name="Robot" parent="Entities" instance=ExtResource("3_e8kvw")]
+position = Vector2(224, 128)
+
+[node name="Robot2" parent="Entities" instance=ExtResource("3_e8kvw")]
+position = Vector2(176, 96)
+
+[node name="Interactables" type="Node2D" parent="."]
+
+[node name="Teleporter" parent="Interactables" node_paths=PackedStringArray("buttons") instance=ExtResource("4_wgprx")]
+position = Vector2(192, 128)
+buttons = [NodePath("../FloorButton"), NodePath("../FloorButton2")]
+
+[node name="FloorButton" parent="Interactables" instance=ExtResource("5_0f3yq")]
+position = Vector2(96, 64)
+
+[node name="FloorButton2" parent="Interactables" instance=ExtResource("5_0f3yq")]
+position = Vector2(192, 96)
+
+[node name="Floor" type="Node2D" parent="."]
