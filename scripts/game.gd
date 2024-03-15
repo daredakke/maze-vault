@@ -15,7 +15,7 @@ func _ready() -> void:
 	splash.splash_ended.connect(pause.focus_main_menu)
 	pause.game_started.connect(_start_game)
 	pause.game_continued.connect(_unpause_game)
-	
+
 	pause.load_settings()
 	_pause_game()
 
@@ -23,11 +23,11 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	if not Global.game_started or Global.game_paused:
 		return
-	
+
 	if Input.is_action_just_pressed("pause"):
 		_pause_game()
 		return
-	
+
 	if Input.is_action_just_pressed("reset"):
 		EventBus.level_reset.emit()
 		return
@@ -38,11 +38,11 @@ func _connect_button_sfx(node: Node) -> void:
 		node.focus_entered.connect(_menu_hovered)
 		node.mouse_entered.connect(_menu_hovered)
 		node.pressed.connect(_menu_selected)
-	
+
 	if node is HSlider:
 		node.focus_entered.connect(_menu_hovered)
 		node.mouse_entered.connect(_menu_hovered)
-		
+
 	if node.is_in_group("sfx_slider"):
 		node.drag_ended.connect(_sfx_slider_drag_ended)
 
@@ -50,7 +50,7 @@ func _connect_button_sfx(node: Node) -> void:
 func _start_game() -> void:
 	Global.game_started = true
 	EventBus.game_started.emit()
-	
+
 	_unpause_game()
 
 
@@ -67,7 +67,7 @@ func _unpause_game() -> void:
 func _handle_pause_state() -> void:
 	if Global.game_paused:
 		pause.show()
-		
+
 		if Global.game_started:
 			pause.focus_main_menu()
 	else:

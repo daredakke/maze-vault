@@ -34,6 +34,9 @@ const LEVEL_07: PackedScene = preload("res://scenes/levels/level_07.tscn")
 const LEVEL_08: PackedScene = preload("res://scenes/levels/level_08.tscn")
 const LEVEL_09: PackedScene = preload("res://scenes/levels/level_09.tscn")
 const LEVEL_10: PackedScene = preload("res://scenes/levels/level_10.tscn")
+const LEVEL_11: PackedScene = preload("res://scenes/levels/level_11.tscn")
+const LEVEL_12: PackedScene = preload("res://scenes/levels/level_12.tscn")
+const LEVEL_13: PackedScene = preload("res://scenes/levels/level_13.tscn")
 
 
 var _level_scenes: Array = [
@@ -60,6 +63,9 @@ var _level_scenes: Array = [
 	LEVEL_07,
 	LEVEL_09,
 	LEVEL_10,
+	LEVEL_12,
+	LEVEL_11,
+	LEVEL_13,
 	END,
 	END_TWO,
 	END_THREE,
@@ -76,22 +82,22 @@ func _ready() -> void:
 	for scene in _level_scenes:
 		var instance = scene.instantiate() as Node
 		_level_instances.append(instance)
-	
+
 	# Add first level
 	_current_level_instance = _level_instances[_current_level_index]
 	add_child(_current_level_instance)
-	
+
 	EventBus.player_reached_exit.connect(next_level)
 
 
 func next_level() -> void:
 	_current_level_index += 1
-	
+
 	if _current_level_index >= _level_instances.size():
 		return
-	
+
 	remove_child(_current_level_instance)
 	_current_level_instance.queue_free()
-	
+
 	_current_level_instance = _level_instances[_current_level_index]
 	add_child(_current_level_instance)

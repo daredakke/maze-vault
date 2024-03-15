@@ -15,7 +15,7 @@ var _starting_position: Vector2
 func _ready() -> void:
 	EventBus.level_reset.connect(reset)
 	animation_player.play("flicker")
-	
+
 	_starting_position = global_position
 
 
@@ -33,10 +33,10 @@ func destroy() -> void:
 func move(dir: Vector2) -> bool:
 	collision_ray.target_position = dir * GRID_SIZE
 	collision_ray.force_raycast_update()
-	
+
 	if not collision_ray.is_colliding():
 		position += dir * GRID_SIZE
 		EventBus.box_moved.emit()
 		return true
-	
+
 	return false
