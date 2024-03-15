@@ -14,3 +14,4 @@ signal teleporter_activated
 signal teleporter_deactivated
 signal shot_fired
 signal robot_released
+signal end_cutscene

@@ -29,6 +29,7 @@ func _ready() -> void:
 	EventBus.teleporter_deactivated.connect(play_teleporter_deactivated)
 	EventBus.shot_fired.connect(play_shot_fired)
 	EventBus.robot_released.connect(play_robot_released)
+	EventBus.end_cutscene.connect(play_player_death)
 
 
 func play_menu_selected() -> void:
