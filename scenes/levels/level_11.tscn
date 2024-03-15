@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://b4rir04h62g4s"]
+[gd_scene load_steps=11 format=3 uid="uid://xhvs6pq31y48"]
 
 [ext_resource type="Texture2D" uid="uid://q64fopn2ht18" path="res://assets/tiled-grid.png" id="1_ql0ga"]
 [ext_resource type="PackedScene" uid="uid://bh36j4ina3tjr" path="res://scenes/wall.tscn" id="2_4m05t"]

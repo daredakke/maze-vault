@@ -1,7 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://dj48ctcwj37ih"]
+[gd_scene load_steps=11 format=3 uid="uid://dj48ctcwj37ih"]
 
 [ext_resource type="Texture2D" uid="uid://q64fopn2ht18" path="res://assets/tiled-grid.png" id="1_276rp"]
 [ext_resource type="PackedScene" uid="uid://bh36j4ina3tjr" path="res://scenes/wall.tscn" id="2_86ni3"]
+[ext_resource type="PackedScene" uid="uid://dhbty1ajjnn6n" path="res://scenes/black_bg.tscn" id="2_eyaj1"]
 [ext_resource type="PackedScene" uid="uid://ciaf6xdrrx2v4" path="res://scenes/player.tscn" id="3_5oa3s"]
 [ext_resource type="PackedScene" uid="uid://c2uip3188o5lx" path="res://scenes/robot.tscn" id="4_a3smc"]
 [ext_resource type="PackedScene" uid="uid://ddx07vxha00k4" path="res://scenes/teleporter.tscn" id="5_l6nv3"]
@@ -20,6 +21,22 @@ offset = Vector2(8, 8)
 metadata/_edit_lock_ = true
 
 [node name="BG" type="Node2D" parent="."]
+
+[node name="BlackBG" parent="BG" instance=ExtResource("2_eyaj1")]
+position = Vector2(40, 88)
+scale = Vector2(5, 11)
+
+[node name="BlackBG2" parent="BG" instance=ExtResource("2_eyaj1")]
+position = Vector2(160, 16)
+scale = Vector2(20, 2)
+
+[node name="BlackBG3" parent="BG" instance=ExtResource("2_eyaj1")]
+position = Vector2(280, 88)
+scale = Vector2(5, 11)
+
+[node name="BlackBG4" parent="BG" instance=ExtResource("2_eyaj1")]
+position = Vector2(160, 160)
+scale = Vector2(20, 2)
 
 [node name="Walls" type="Node2D" parent="."]
 
