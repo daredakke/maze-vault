@@ -22,6 +22,7 @@ const POSSESSOR_TWO: PackedScene = preload("res://scenes/cutscenes/possessor_two
 # Levels
 const LEVEL_TEST: PackedScene = preload("res://scenes/levels/level_test.tscn")
 const LEVEL_TEST_2: PackedScene = preload("res://scenes/levels/level_test_2.tscn")
+const LEVEL_01: PackedScene = preload("res://scenes/levels/level_01.tscn")
 const LEVEL_02: PackedScene = preload("res://scenes/levels/level_02.tscn")
 const LEVEL_02b: PackedScene = preload("res://scenes/levels/level_02b.tscn")
 const LEVEL_03: PackedScene = preload("res://scenes/levels/level_03.tscn")
@@ -44,7 +45,6 @@ const LEVEL_15: PackedScene = preload("res://scenes/levels/level_15.tscn")
 
 
 var _level_scenes: Array = [
-	LEVEL_15,
 	INTRO,
 	INTRO_CONTROLS,
 	INTRO_GOAL,
@@ -61,6 +61,7 @@ var _level_scenes: Array = [
 	LEVEL_05,
 	PITS,
 	LEVEL_TEST_2,
+	LEVEL_01,
 	LEVEL_05b,
 	FLOOR,
 	LEVEL_06,
@@ -73,6 +74,7 @@ var _level_scenes: Array = [
 	LEVEL_12,
 	LEVEL_11,
 	LEVEL_14,
+	LEVEL_15,
 	LEVEL_13,
 	END,
 	END_TWO,
