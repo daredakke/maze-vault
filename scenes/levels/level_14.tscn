@@ -429,6 +429,54 @@ collision_box = NodePath("../Box/CollisionShape2D")
 position = Vector2(96, 128)
 is_one_step_tile = true
 
+[node name="Void10" parent="Floor" instance=ExtResource("8_y3n3e")]
+position = Vector2(112, 128)
+is_one_step_tile = true
+
+[node name="Void11" parent="Floor" instance=ExtResource("8_y3n3e")]
+position = Vector2(112, 112)
+is_one_step_tile = true
+
+[node name="Void12" parent="Floor" instance=ExtResource("8_y3n3e")]
+position = Vector2(112, 144)
+is_one_step_tile = true
+
+[node name="Void13" parent="Floor" instance=ExtResource("8_y3n3e")]
+position = Vector2(112, 48)
+is_one_step_tile = true
+
+[node name="Void14" parent="Floor" instance=ExtResource("8_y3n3e")]
+position = Vector2(128, 48)
+is_one_step_tile = true
+
+[node name="Void15" parent="Floor" instance=ExtResource("8_y3n3e")]
+position = Vector2(128, 32)
+is_one_step_tile = true
+
+[node name="Void16" parent="Floor" instance=ExtResource("8_y3n3e")]
+position = Vector2(144, 48)
+is_one_step_tile = true
+
+[node name="Void17" parent="Floor" instance=ExtResource("8_y3n3e")]
+position = Vector2(160, 48)
+is_one_step_tile = true
+
+[node name="Void18" parent="Floor" instance=ExtResource("8_y3n3e")]
+position = Vector2(160, 64)
+is_one_step_tile = true
+
+[node name="Void19" parent="Floor" instance=ExtResource("8_y3n3e")]
+position = Vector2(208, 112)
+is_one_step_tile = true
+
+[node name="Void20" parent="Floor" instance=ExtResource("8_y3n3e")]
+position = Vector2(224, 112)
+is_one_step_tile = true
+
+[node name="Void21" parent="Floor" instance=ExtResource("8_y3n3e")]
+position = Vector2(240, 112)
+is_one_step_tile = true
+
 [node name="Void8" parent="Floor" instance=ExtResource("8_y3n3e")]
 position = Vector2(96, 144)
 
