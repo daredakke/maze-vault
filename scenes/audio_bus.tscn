@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://b1icoukkbev5p"]
+[gd_scene load_steps=16 format=3 uid="uid://b1icoukkbev5p"]
 
 [ext_resource type="AudioStream" uid="uid://dwyynvm86wnqj" path="res://assets/sfx/player-death.wav" id="1_e2lcg"]
 [ext_resource type="Script" path="res://scripts/audio_bus.gd" id="1_juh5h"]
@@ -14,6 +14,7 @@
 [ext_resource type="AudioStream" uid="uid://c3bhym4nb140i" path="res://assets/sfx/robot-release.wav" id="11_ejk80"]
 [ext_resource type="AudioStream" uid="uid://b8u6fsia2mbhw" path="res://assets/sfx/button-press.wav" id="12_aj4t4"]
 [ext_resource type="AudioStream" uid="uid://cc8ebmv5ubygq" path="res://assets/sfx/button-release.wav" id="13_fxkat"]
+[ext_resource type="AudioStream" uid="uid://ckku23t2xitad" path="res://assets/in over your head.mp3" id="15_jjdw7"]
 
 [node name="AudioBus" type="Node"]
 script = ExtResource("1_juh5h")
@@ -81,8 +82,13 @@ stream = ExtResource("13_fxkat")
 max_polyphony = 6
 bus = &"SFX"
 
+[node name="GameMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("15_jjdw7")
+bus = &"Music"
+
 [connection signal="finished" from="PlayerDeathSFX" to="." method="_on_player_death_sfx_finished"]
 [connection signal="finished" from="RobotDeathSFX" to="." method="_on_robot_death_sfx_finished"]
 [connection signal="finished" from="BoxMoveSFX" to="." method="_on_box_move_sfx_finished"]
 [connection signal="finished" from="ShotFiredSFX" to="." method="_on_shot_fired_sfx_finished"]
 [connection signal="finished" from="RobotReleasedSFX" to="." method="_on_robot_released_sfx_finished"]
+[connection signal="finished" from="GameMusic" to="." method="play_game_music"]

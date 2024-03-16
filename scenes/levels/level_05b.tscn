@@ -170,11 +170,11 @@ position = Vector2(208, 128)
 [node name="Interactables" type="Node2D" parent="."]
 
 [node name="Teleporter" parent="Interactables" node_paths=PackedStringArray("buttons") instance=ExtResource("4_aqgtq")]
-position = Vector2(160, 96)
+position = Vector2(128, 32)
 buttons = [NodePath("../FloorButton"), NodePath("../FloorButton2")]
 
 [node name="FloorButton" parent="Interactables" instance=ExtResource("5_cuckx")]
-position = Vector2(96, 64)
+position = Vector2(112, 96)
 
 [node name="FloorButton2" parent="Interactables" instance=ExtResource("5_cuckx")]
 position = Vector2(224, 64)
@@ -182,7 +182,7 @@ position = Vector2(224, 64)
 [node name="Floor" type="Node2D" parent="."]
 
 [node name="Void" parent="Floor" instance=ExtResource("7_5h5gx")]
-position = Vector2(160, 64)
+position = Vector2(96, 32)
 
 [node name="Void2" parent="Floor" instance=ExtResource("7_5h5gx")]
 position = Vector2(112, 80)
@@ -227,13 +227,13 @@ position = Vector2(240, 144)
 position = Vector2(192, 96)
 
 [node name="Void15" parent="Floor" instance=ExtResource("7_5h5gx")]
-position = Vector2(240, 32)
+position = Vector2(192, 144)
 
 [node name="Void16" parent="Floor" instance=ExtResource("7_5h5gx")]
 position = Vector2(144, 32)
 
 [node name="Void17" parent="Floor" instance=ExtResource("7_5h5gx")]
-position = Vector2(160, 80)
+position = Vector2(96, 144)
 
 [node name="Void24" parent="Floor" instance=ExtResource("7_5h5gx")]
 position = Vector2(144, 80)
@@ -258,6 +258,12 @@ position = Vector2(224, 80)
 
 [node name="Void22" parent="Floor" instance=ExtResource("7_5h5gx")]
 position = Vector2(176, 80)
+
+[node name="Void28" parent="Floor" instance=ExtResource("7_5h5gx")]
+position = Vector2(160, 80)
+
+[node name="Void29" parent="Floor" instance=ExtResource("7_5h5gx")]
+position = Vector2(160, 96)
 
 [node name="Void23" parent="Floor" instance=ExtResource("7_5h5gx")]
 position = Vector2(176, 96)

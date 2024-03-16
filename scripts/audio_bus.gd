@@ -15,6 +15,7 @@ extends Node
 @onready var robot_released_sfx: AudioStreamPlayer = $RobotReleasedSFX
 @onready var button_pressed_sfx: AudioStreamPlayer = $ButtonPressedSFX
 @onready var button_released_sfx: AudioStreamPlayer = $ButtonReleasedSFX
+@onready var game_music: AudioStreamPlayer = $GameMusic
 
 
 func _ready() -> void:
@@ -30,6 +31,12 @@ func _ready() -> void:
 	EventBus.shot_fired.connect(play_shot_fired)
 	EventBus.robot_released.connect(play_robot_released)
 	EventBus.end_cutscene.connect(play_player_death)
+	
+	play_game_music()
+
+
+func play_game_music() -> void:
+	game_music.play()
 
 
 func play_menu_selected() -> void:

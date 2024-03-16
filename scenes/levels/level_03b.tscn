@@ -20,24 +20,24 @@ metadata/_edit_lock_ = true
 [node name="BG" type="Node2D" parent="."]
 
 [node name="BlackBG" parent="BG" instance=ExtResource("2_7cn6i")]
-position = Vector2(40, 88)
-scale = Vector2(5, 11)
+position = Vector2(32, 88)
+scale = Vector2(4, 11)
 
 [node name="BlackBG2" parent="BG" instance=ExtResource("2_7cn6i")]
-position = Vector2(48, 128)
-scale = Vector2(6, 6)
+position = Vector2(56, 128)
+scale = Vector2(7, 6)
 
 [node name="BlackBG3" parent="BG" instance=ExtResource("2_7cn6i")]
-position = Vector2(88, 152)
-scale = Vector2(11, 3)
+position = Vector2(96, 152)
+scale = Vector2(12, 3)
 
 [node name="BlackBG4" parent="BG" instance=ExtResource("2_7cn6i")]
 position = Vector2(160, 160)
 scale = Vector2(20, 2)
 
 [node name="BlackBG5" parent="BG" instance=ExtResource("2_7cn6i")]
-position = Vector2(280, 88)
-scale = Vector2(5, 11)
+position = Vector2(288, 88)
+scale = Vector2(4, 11)
 
 [node name="BlackBG6" parent="BG" instance=ExtResource("2_7cn6i")]
 position = Vector2(160, 24)
@@ -46,149 +46,161 @@ scale = Vector2(20, 3)
 [node name="Walls" type="Node2D" parent="."]
 
 [node name="Wall" parent="Walls" instance=ExtResource("2_t8w2w")]
-position = Vector2(96, 96)
+position = Vector2(112, 96)
 
 [node name="Wall2" parent="Walls" instance=ExtResource("2_t8w2w")]
-position = Vector2(96, 112)
+position = Vector2(112, 112)
 
 [node name="Wall3" parent="Walls" instance=ExtResource("2_t8w2w")]
-position = Vector2(128, 128)
-
-[node name="Wall11" parent="Walls" instance=ExtResource("2_t8w2w")]
-position = Vector2(112, 128)
-
-[node name="Wall4" parent="Walls" instance=ExtResource("2_t8w2w")]
-position = Vector2(96, 128)
-
-[node name="Wall5" parent="Walls" instance=ExtResource("2_t8w2w")]
 position = Vector2(144, 128)
 
-[node name="Wall6" parent="Walls" instance=ExtResource("2_t8w2w")]
-position = Vector2(176, 128)
+[node name="Wall11" parent="Walls" instance=ExtResource("2_t8w2w")]
+position = Vector2(128, 128)
 
-[node name="Wall7" parent="Walls" instance=ExtResource("2_t8w2w")]
+[node name="Wall4" parent="Walls" instance=ExtResource("2_t8w2w")]
+position = Vector2(112, 128)
+
+[node name="Wall5" parent="Walls" instance=ExtResource("2_t8w2w")]
 position = Vector2(160, 128)
 
+[node name="Wall6" parent="Walls" instance=ExtResource("2_t8w2w")]
+position = Vector2(192, 128)
+
+[node name="Wall7" parent="Walls" instance=ExtResource("2_t8w2w")]
+position = Vector2(176, 128)
+
 [node name="Wall8" parent="Walls" instance=ExtResource("2_t8w2w")]
-position = Vector2(176, 112)
-
-[node name="Wall9" parent="Walls" instance=ExtResource("2_t8w2w")]
-position = Vector2(208, 112)
-
-[node name="Wall10" parent="Walls" instance=ExtResource("2_t8w2w")]
 position = Vector2(192, 112)
 
+[node name="Wall9" parent="Walls" instance=ExtResource("2_t8w2w")]
+position = Vector2(224, 112)
+
+[node name="Wall10" parent="Walls" instance=ExtResource("2_t8w2w")]
+position = Vector2(208, 112)
+
 [node name="Wall18" parent="Walls" instance=ExtResource("2_t8w2w")]
-position = Vector2(176, 80)
-
-[node name="Wall36" parent="Walls" instance=ExtResource("2_t8w2w")]
-position = Vector2(144, 80)
-
-[node name="Wall48" parent="Walls" instance=ExtResource("2_t8w2w")]
-position = Vector2(128, 80)
-
-[node name="Wall19" parent="Walls" instance=ExtResource("2_t8w2w")]
-position = Vector2(96, 80)
-
-[node name="Wall32" parent="Walls" instance=ExtResource("2_t8w2w")]
-position = Vector2(80, 64)
-
-[node name="Wall33" parent="Walls" instance=ExtResource("2_t8w2w")]
-position = Vector2(80, 80)
-
-[node name="Wall34" parent="Walls" instance=ExtResource("2_t8w2w")]
-position = Vector2(80, 48)
-
-[node name="Wall35" parent="Walls" instance=ExtResource("2_t8w2w")]
-position = Vector2(96, 48)
-
-[node name="Wall37" parent="Walls" instance=ExtResource("2_t8w2w")]
-position = Vector2(128, 48)
-
-[node name="Wall45" parent="Walls" instance=ExtResource("2_t8w2w")]
-position = Vector2(112, 48)
-
-[node name="Wall38" parent="Walls" instance=ExtResource("2_t8w2w")]
-position = Vector2(144, 48)
-
-[node name="Wall39" parent="Walls" instance=ExtResource("2_t8w2w")]
-position = Vector2(160, 48)
-
-[node name="Wall40" parent="Walls" instance=ExtResource("2_t8w2w")]
-position = Vector2(176, 48)
-
-[node name="Wall41" parent="Walls" instance=ExtResource("2_t8w2w")]
-position = Vector2(192, 48)
-
-[node name="Wall42" parent="Walls" instance=ExtResource("2_t8w2w")]
-position = Vector2(208, 48)
-
-[node name="Wall43" parent="Walls" instance=ExtResource("2_t8w2w")]
-position = Vector2(224, 48)
-
-[node name="Wall44" parent="Walls" instance=ExtResource("2_t8w2w")]
-position = Vector2(240, 48)
-
-[node name="Wall20" parent="Walls" instance=ExtResource("2_t8w2w")]
 position = Vector2(192, 80)
 
-[node name="Wall22" parent="Walls" instance=ExtResource("2_t8w2w")]
+[node name="Wall36" parent="Walls" instance=ExtResource("2_t8w2w")]
+position = Vector2(160, 80)
+
+[node name="Wall48" parent="Walls" instance=ExtResource("2_t8w2w")]
+position = Vector2(144, 80)
+
+[node name="Wall19" parent="Walls" instance=ExtResource("2_t8w2w")]
+position = Vector2(112, 80)
+
+[node name="Wall32" parent="Walls" instance=ExtResource("2_t8w2w")]
+position = Vector2(64, 64)
+
+[node name="Wall33" parent="Walls" instance=ExtResource("2_t8w2w")]
+position = Vector2(96, 80)
+
+[node name="Wall34" parent="Walls" instance=ExtResource("2_t8w2w")]
+position = Vector2(96, 48)
+
+[node name="Wall35" parent="Walls" instance=ExtResource("2_t8w2w")]
+position = Vector2(112, 48)
+
+[node name="Wall49" parent="Walls" instance=ExtResource("2_t8w2w")]
+position = Vector2(64, 48)
+
+[node name="Wall50" parent="Walls" instance=ExtResource("2_t8w2w")]
+position = Vector2(80, 48)
+
+[node name="Wall51" parent="Walls" instance=ExtResource("2_t8w2w")]
+position = Vector2(64, 80)
+
+[node name="Wall52" parent="Walls" instance=ExtResource("2_t8w2w")]
+position = Vector2(80, 80)
+
+[node name="Wall37" parent="Walls" instance=ExtResource("2_t8w2w")]
+position = Vector2(144, 48)
+
+[node name="Wall45" parent="Walls" instance=ExtResource("2_t8w2w")]
+position = Vector2(128, 48)
+
+[node name="Wall38" parent="Walls" instance=ExtResource("2_t8w2w")]
+position = Vector2(160, 48)
+
+[node name="Wall39" parent="Walls" instance=ExtResource("2_t8w2w")]
+position = Vector2(176, 48)
+
+[node name="Wall40" parent="Walls" instance=ExtResource("2_t8w2w")]
+position = Vector2(192, 48)
+
+[node name="Wall41" parent="Walls" instance=ExtResource("2_t8w2w")]
+position = Vector2(208, 48)
+
+[node name="Wall42" parent="Walls" instance=ExtResource("2_t8w2w")]
+position = Vector2(224, 48)
+
+[node name="Wall43" parent="Walls" instance=ExtResource("2_t8w2w")]
+position = Vector2(240, 48)
+
+[node name="Wall44" parent="Walls" instance=ExtResource("2_t8w2w")]
+position = Vector2(256, 48)
+
+[node name="Wall20" parent="Walls" instance=ExtResource("2_t8w2w")]
 position = Vector2(208, 80)
 
+[node name="Wall22" parent="Walls" instance=ExtResource("2_t8w2w")]
+position = Vector2(224, 80)
+
 [node name="Wall31" parent="Walls" instance=ExtResource("2_t8w2w")]
-position = Vector2(208, 96)
+position = Vector2(224, 96)
 
 [node name="Wall14" parent="Walls" instance=ExtResource("2_t8w2w")]
-position = Vector2(240, 80)
+position = Vector2(256, 80)
 
 [node name="Wall46" parent="Walls" instance=ExtResource("2_t8w2w")]
-position = Vector2(240, 64)
+position = Vector2(256, 64)
 
 [node name="Wall15" parent="Walls" instance=ExtResource("2_t8w2w")]
-position = Vector2(240, 128)
+position = Vector2(256, 128)
 
 [node name="Wall23" parent="Walls" instance=ExtResource("2_t8w2w")]
-position = Vector2(240, 144)
+position = Vector2(256, 144)
 
 [node name="Wall24" parent="Walls" instance=ExtResource("2_t8w2w")]
-position = Vector2(224, 144)
+position = Vector2(240, 144)
 
 [node name="Wall28" parent="Walls" instance=ExtResource("2_t8w2w")]
-position = Vector2(208, 144)
+position = Vector2(224, 144)
 
 [node name="Wall29" parent="Walls" instance=ExtResource("2_t8w2w")]
-position = Vector2(192, 144)
+position = Vector2(208, 144)
 
 [node name="Wall30" parent="Walls" instance=ExtResource("2_t8w2w")]
-position = Vector2(176, 144)
+position = Vector2(192, 144)
 
 [node name="Wall27" parent="Walls" instance=ExtResource("2_t8w2w")]
-position = Vector2(240, 96)
+position = Vector2(256, 96)
 
 [node name="Wall47" parent="Walls" instance=ExtResource("2_t8w2w")]
-position = Vector2(240, 112)
+position = Vector2(256, 112)
 
 [node name="Entities" type="Node2D" parent="."]
 
 [node name="Player" parent="Entities" instance=ExtResource("2_actvl")]
-position = Vector2(128, 112)
+position = Vector2(144, 112)
 
 [node name="Robot" parent="Entities" instance=ExtResource("3_e8kvw")]
-position = Vector2(224, 128)
+position = Vector2(240, 128)
 
 [node name="Robot2" parent="Entities" instance=ExtResource("3_e8kvw")]
-position = Vector2(176, 96)
+position = Vector2(192, 96)
 
 [node name="Interactables" type="Node2D" parent="."]
 
 [node name="Teleporter" parent="Interactables" node_paths=PackedStringArray("buttons") instance=ExtResource("4_wgprx")]
-position = Vector2(192, 128)
+position = Vector2(208, 128)
 buttons = [NodePath("../FloorButton"), NodePath("../FloorButton2")]
 
 [node name="FloorButton" parent="Interactables" instance=ExtResource("5_0f3yq")]
-position = Vector2(96, 64)
+position = Vector2(80, 64)
 
 [node name="FloorButton2" parent="Interactables" instance=ExtResource("5_0f3yq")]
-position = Vector2(192, 96)
+position = Vector2(208, 96)
 
 [node name="Floor" type="Node2D" parent="."]

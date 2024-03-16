@@ -277,7 +277,7 @@ position = Vector2(272, 32)
 [node name="Interactables" type="Node2D" parent="."]
 
 [node name="Teleporter" parent="Interactables" node_paths=PackedStringArray("buttons") instance=ExtResource("5_vd480")]
-position = Vector2(176, 80)
+position = Vector2(160, 112)
 buttons = [NodePath("../FloorButton"), NodePath("../FloorButton2"), NodePath("../FloorButton3")]
 
 [node name="FloorButton" parent="Interactables" instance=ExtResource("6_t0hg1")]
