@@ -29,6 +29,7 @@ const LEVEL_03b: PackedScene = preload("res://scenes/levels/level_03b.tscn")
 const LEVEL_04: PackedScene = preload("res://scenes/levels/level_04.tscn")
 const LEVEL_04b: PackedScene = preload("res://scenes/levels/level_04b.tscn")
 const LEVEL_05: PackedScene = preload("res://scenes/levels/level_05.tscn")
+const LEVEL_05b: PackedScene = preload("res://scenes/levels/level_05b.tscn")
 const LEVEL_06: PackedScene = preload("res://scenes/levels/level_06.tscn")
 const LEVEL_06b: PackedScene = preload("res://scenes/levels/level_06b.tscn")
 const LEVEL_07: PackedScene = preload("res://scenes/levels/level_07.tscn")
@@ -57,6 +58,7 @@ var _level_scenes: Array = [
 	LEVEL_05,
 	PITS,
 	LEVEL_TEST_2,
+	LEVEL_05b,
 	FLOOR,
 	LEVEL_06,
 	LEVEL_06b,
