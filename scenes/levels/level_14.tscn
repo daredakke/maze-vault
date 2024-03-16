@@ -233,195 +233,175 @@ position = Vector2(272, 128)
 position = Vector2(288, 32)
 
 [node name="Box" parent="Interactables" instance=ExtResource("7_yqms3")]
+position = Vector2(176, 48)
+
+[node name="Box3" parent="Interactables" instance=ExtResource("7_yqms3")]
+position = Vector2(192, 48)
+
+[node name="Box10" parent="Interactables" instance=ExtResource("7_yqms3")]
+position = Vector2(192, 64)
+
+[node name="Box14" parent="Interactables" instance=ExtResource("7_yqms3")]
 position = Vector2(160, 112)
+
+[node name="Box15" parent="Interactables" instance=ExtResource("7_yqms3")]
+position = Vector2(160, 128)
+
+[node name="Box16" parent="Interactables" instance=ExtResource("7_yqms3")]
+position = Vector2(128, 112)
+
+[node name="Box17" parent="Interactables" instance=ExtResource("7_yqms3")]
+position = Vector2(128, 144)
+
+[node name="Box20" parent="Interactables" instance=ExtResource("7_yqms3")]
+position = Vector2(176, 144)
+
+[node name="Box22" parent="Interactables" instance=ExtResource("7_yqms3")]
+position = Vector2(192, 112)
+
+[node name="Box23" parent="Interactables" instance=ExtResource("7_yqms3")]
+position = Vector2(176, 96)
+
+[node name="Box28" parent="Interactables" instance=ExtResource("7_yqms3")]
+position = Vector2(192, 96)
+
+[node name="Box29" parent="Interactables" instance=ExtResource("7_yqms3")]
+position = Vector2(224, 128)
+
+[node name="Box30" parent="Interactables" instance=ExtResource("7_yqms3")]
+position = Vector2(240, 128)
+
+[node name="Box32" parent="Interactables" instance=ExtResource("7_yqms3")]
+position = Vector2(240, 64)
+
+[node name="Box33" parent="Interactables" instance=ExtResource("7_yqms3")]
+position = Vector2(256, 48)
+
+[node name="Box37" parent="Interactables" instance=ExtResource("7_yqms3")]
+position = Vector2(272, 48)
+
+[node name="Box38" parent="Interactables" instance=ExtResource("7_yqms3")]
+position = Vector2(272, 64)
+
+[node name="Box41" parent="Interactables" instance=ExtResource("7_yqms3")]
+position = Vector2(272, 96)
+
+[node name="Box44" parent="Interactables" instance=ExtResource("7_yqms3")]
+position = Vector2(256, 80)
+
+[node name="Box45" parent="Interactables" instance=ExtResource("7_yqms3")]
+position = Vector2(288, 80)
+
+[node name="Box46" parent="Interactables" instance=ExtResource("7_yqms3")]
+position = Vector2(112, 32)
 
 [node name="Box2" parent="Interactables" node_paths=PackedStringArray("collision_box") instance=ExtResource("7_yqms3")]
 position = Vector2(160, 96)
-collision_box = NodePath("../Box/CollisionShape2D")
-
-[node name="Box3" parent="Interactables" node_paths=PackedStringArray("collision_box") instance=ExtResource("7_yqms3")]
-position = Vector2(192, 96)
-collision_box = NodePath("../Box/CollisionShape2D")
-
-[node name="Box45" parent="Interactables" node_paths=PackedStringArray("collision_box") instance=ExtResource("7_yqms3")]
-position = Vector2(192, 64)
-collision_box = NodePath("../Box/CollisionShape2D")
-
-[node name="Box44" parent="Interactables" node_paths=PackedStringArray("collision_box") instance=ExtResource("7_yqms3")]
-position = Vector2(176, 96)
-collision_box = NodePath("../Box/CollisionShape2D")
-
-[node name="Box37" parent="Interactables" node_paths=PackedStringArray("collision_box") instance=ExtResource("7_yqms3")]
-position = Vector2(192, 48)
-collision_box = NodePath("../Box/CollisionShape2D")
-
-[node name="Box38" parent="Interactables" node_paths=PackedStringArray("collision_box") instance=ExtResource("7_yqms3")]
-position = Vector2(176, 48)
-collision_box = NodePath("../Box/CollisionShape2D")
+collision_box = NodePath("")
 
 [node name="Box39" parent="Interactables" node_paths=PackedStringArray("collision_box") instance=ExtResource("7_yqms3")]
 position = Vector2(160, 32)
-collision_box = NodePath("../Box/CollisionShape2D")
+collision_box = NodePath("")
 
 [node name="Box40" parent="Interactables" node_paths=PackedStringArray("collision_box") instance=ExtResource("7_yqms3")]
 position = Vector2(144, 32)
-collision_box = NodePath("../Box/CollisionShape2D")
-
-[node name="Box41" parent="Interactables" node_paths=PackedStringArray("collision_box") instance=ExtResource("7_yqms3")]
-position = Vector2(112, 32)
-collision_box = NodePath("../Box/CollisionShape2D")
+collision_box = NodePath("")
 
 [node name="Box42" parent="Interactables" node_paths=PackedStringArray("collision_box") instance=ExtResource("7_yqms3")]
 position = Vector2(112, 64)
-collision_box = NodePath("../Box/CollisionShape2D")
+collision_box = NodePath("")
 
 [node name="Box43" parent="Interactables" node_paths=PackedStringArray("collision_box") instance=ExtResource("7_yqms3")]
 position = Vector2(208, 32)
-collision_box = NodePath("../Box/CollisionShape2D")
+collision_box = NodePath("")
 
 [node name="Box4" parent="Interactables" node_paths=PackedStringArray("collision_box") instance=ExtResource("7_yqms3")]
 position = Vector2(160, 80)
-collision_box = NodePath("../Box/CollisionShape2D")
+collision_box = NodePath("")
 
 [node name="Box5" parent="Interactables" node_paths=PackedStringArray("collision_box") instance=ExtResource("7_yqms3")]
 position = Vector2(128, 64)
-collision_box = NodePath("../Box/CollisionShape2D")
+collision_box = NodePath("")
 
 [node name="Box6" parent="Interactables" node_paths=PackedStringArray("collision_box") instance=ExtResource("7_yqms3")]
 position = Vector2(224, 64)
-collision_box = NodePath("../Box/CollisionShape2D")
+collision_box = NodePath("")
 
 [node name="Box7" parent="Interactables" node_paths=PackedStringArray("collision_box") instance=ExtResource("7_yqms3")]
 position = Vector2(240, 96)
-collision_box = NodePath("../Box/CollisionShape2D")
-
-[node name="Box46" parent="Interactables" node_paths=PackedStringArray("collision_box") instance=ExtResource("7_yqms3")]
-position = Vector2(288, 80)
-collision_box = NodePath("../Box/CollisionShape2D")
+collision_box = NodePath("")
 
 [node name="Box47" parent="Interactables" node_paths=PackedStringArray("collision_box") instance=ExtResource("7_yqms3")]
 position = Vector2(256, 112)
-collision_box = NodePath("../Box/CollisionShape2D")
+collision_box = NodePath("")
 
 [node name="Box8" parent="Interactables" node_paths=PackedStringArray("collision_box") instance=ExtResource("7_yqms3")]
 position = Vector2(224, 96)
-collision_box = NodePath("../Box/CollisionShape2D")
+collision_box = NodePath("")
 
 [node name="Box9" parent="Interactables" node_paths=PackedStringArray("collision_box") instance=ExtResource("7_yqms3")]
 position = Vector2(208, 128)
-collision_box = NodePath("../Box/CollisionShape2D")
-
-[node name="Box10" parent="Interactables" node_paths=PackedStringArray("collision_box") instance=ExtResource("7_yqms3")]
-position = Vector2(240, 128)
-collision_box = NodePath("../Box/CollisionShape2D")
+collision_box = NodePath("")
 
 [node name="Box48" parent="Interactables" node_paths=PackedStringArray("collision_box") instance=ExtResource("7_yqms3")]
 position = Vector2(240, 144)
-collision_box = NodePath("../Box/CollisionShape2D")
+collision_box = NodePath("")
 
 [node name="Box11" parent="Interactables" node_paths=PackedStringArray("collision_box") instance=ExtResource("7_yqms3")]
 position = Vector2(256, 144)
-collision_box = NodePath("../Box/CollisionShape2D")
+collision_box = NodePath("")
 
 [node name="Box12" parent="Interactables" node_paths=PackedStringArray("collision_box") instance=ExtResource("7_yqms3")]
 position = Vector2(288, 144)
-collision_box = NodePath("../Box/CollisionShape2D")
+collision_box = NodePath("")
 
 [node name="Box13" parent="Interactables" node_paths=PackedStringArray("collision_box") instance=ExtResource("7_yqms3")]
 position = Vector2(288, 112)
-collision_box = NodePath("../Box/CollisionShape2D")
-
-[node name="Box14" parent="Interactables" node_paths=PackedStringArray("collision_box") instance=ExtResource("7_yqms3")]
-position = Vector2(272, 96)
-collision_box = NodePath("../Box/CollisionShape2D")
-
-[node name="Box15" parent="Interactables" node_paths=PackedStringArray("collision_box") instance=ExtResource("7_yqms3")]
-position = Vector2(272, 64)
-collision_box = NodePath("../Box/CollisionShape2D")
-
-[node name="Box16" parent="Interactables" node_paths=PackedStringArray("collision_box") instance=ExtResource("7_yqms3")]
-position = Vector2(256, 80)
-collision_box = NodePath("../Box/CollisionShape2D")
+collision_box = NodePath("")
 
 [node name="Box18" parent="Interactables" node_paths=PackedStringArray("collision_box") instance=ExtResource("7_yqms3")]
 position = Vector2(224, 48)
-collision_box = NodePath("../Box/CollisionShape2D")
+collision_box = NodePath("")
 
 [node name="Box19" parent="Interactables" node_paths=PackedStringArray("collision_box") instance=ExtResource("7_yqms3")]
 position = Vector2(240, 32)
-collision_box = NodePath("../Box/CollisionShape2D")
-
-[node name="Box20" parent="Interactables" node_paths=PackedStringArray("collision_box") instance=ExtResource("7_yqms3")]
-position = Vector2(256, 48)
-collision_box = NodePath("../Box/CollisionShape2D")
+collision_box = NodePath("")
 
 [node name="Box21" parent="Interactables" node_paths=PackedStringArray("collision_box") instance=ExtResource("7_yqms3")]
 position = Vector2(272, 32)
-collision_box = NodePath("../Box/CollisionShape2D")
-
-[node name="Box22" parent="Interactables" node_paths=PackedStringArray("collision_box") instance=ExtResource("7_yqms3")]
-position = Vector2(272, 48)
-collision_box = NodePath("../Box/CollisionShape2D")
-
-[node name="Box23" parent="Interactables" node_paths=PackedStringArray("collision_box") instance=ExtResource("7_yqms3")]
-position = Vector2(240, 64)
-collision_box = NodePath("../Box/CollisionShape2D")
+collision_box = NodePath("")
 
 [node name="Box24" parent="Interactables" node_paths=PackedStringArray("collision_box") instance=ExtResource("7_yqms3")]
 position = Vector2(192, 32)
-collision_box = NodePath("../Box/CollisionShape2D")
+collision_box = NodePath("")
 
 [node name="Box25" parent="Interactables" node_paths=PackedStringArray("collision_box") instance=ExtResource("7_yqms3")]
 position = Vector2(128, 80)
-collision_box = NodePath("../Box/CollisionShape2D")
+collision_box = NodePath("")
 
 [node name="Box26" parent="Interactables" node_paths=PackedStringArray("collision_box") instance=ExtResource("7_yqms3")]
 position = Vector2(144, 64)
-collision_box = NodePath("../Box/CollisionShape2D")
+collision_box = NodePath("")
 
 [node name="Box27" parent="Interactables" node_paths=PackedStringArray("collision_box") instance=ExtResource("7_yqms3")]
 position = Vector2(128, 96)
-collision_box = NodePath("../Box/CollisionShape2D")
-
-[node name="Box28" parent="Interactables" node_paths=PackedStringArray("collision_box") instance=ExtResource("7_yqms3")]
-position = Vector2(128, 144)
-collision_box = NodePath("../Box/CollisionShape2D")
-
-[node name="Box29" parent="Interactables" node_paths=PackedStringArray("collision_box") instance=ExtResource("7_yqms3")]
-position = Vector2(160, 128)
-collision_box = NodePath("../Box/CollisionShape2D")
-
-[node name="Box30" parent="Interactables" node_paths=PackedStringArray("collision_box") instance=ExtResource("7_yqms3")]
-position = Vector2(176, 144)
-collision_box = NodePath("../Box/CollisionShape2D")
+collision_box = NodePath("")
 
 [node name="Box31" parent="Interactables" node_paths=PackedStringArray("collision_box") instance=ExtResource("7_yqms3")]
 position = Vector2(208, 144)
-collision_box = NodePath("../Box/CollisionShape2D")
-
-[node name="Box32" parent="Interactables" node_paths=PackedStringArray("collision_box") instance=ExtResource("7_yqms3")]
-position = Vector2(192, 112)
-collision_box = NodePath("../Box/CollisionShape2D")
-
-[node name="Box33" parent="Interactables" node_paths=PackedStringArray("collision_box") instance=ExtResource("7_yqms3")]
-position = Vector2(128, 112)
-collision_box = NodePath("../Box/CollisionShape2D")
+collision_box = NodePath("")
 
 [node name="Box34" parent="Interactables" node_paths=PackedStringArray("collision_box") instance=ExtResource("7_yqms3")]
 position = Vector2(112, 96)
-collision_box = NodePath("../Box/CollisionShape2D")
+collision_box = NodePath("")
 
 [node name="Box35" parent="Interactables" node_paths=PackedStringArray("collision_box") instance=ExtResource("7_yqms3")]
 position = Vector2(144, 80)
-collision_box = NodePath("../Box/CollisionShape2D")
+collision_box = NodePath("")
 
 [node name="Box36" parent="Interactables" node_paths=PackedStringArray("collision_box") instance=ExtResource("7_yqms3")]
 position = Vector2(208, 80)
-collision_box = NodePath("../Box/CollisionShape2D")
-
-[node name="Box17" parent="Interactables" node_paths=PackedStringArray("collision_box") instance=ExtResource("7_yqms3")]
-position = Vector2(224, 128)
-collision_box = NodePath("../Box/CollisionShape2D")
+collision_box = NodePath("")
 
 [node name="Floor" type="Node2D" parent="."]
 

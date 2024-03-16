@@ -167,51 +167,42 @@ position = Vector2(224, 48)
 
 [node name="Interactables" type="Node2D" parent="."]
 
+[node name="Box" parent="Interactables" instance=ExtResource("7_k6wti")]
+position = Vector2(176, 64)
+
+[node name="Box2" parent="Interactables" instance=ExtResource("7_k6wti")]
+position = Vector2(192, 80)
+
+[node name="Box3" parent="Interactables" instance=ExtResource("7_k6wti")]
+position = Vector2(176, 80)
+
+[node name="Box4" parent="Interactables" instance=ExtResource("7_k6wti")]
+position = Vector2(208, 64)
+
+[node name="Box5" parent="Interactables" instance=ExtResource("7_k6wti")]
+position = Vector2(192, 96)
+
+[node name="Box6" parent="Interactables" instance=ExtResource("7_k6wti")]
+position = Vector2(208, 96)
+
+[node name="Box7" parent="Interactables" instance=ExtResource("7_k6wti")]
+position = Vector2(224, 96)
+
+[node name="Box8" parent="Interactables" instance=ExtResource("7_k6wti")]
+position = Vector2(176, 112)
+
+[node name="Box9" parent="Interactables" instance=ExtResource("7_k6wti")]
+position = Vector2(192, 128)
+
+[node name="Box10" parent="Interactables" instance=ExtResource("7_k6wti")]
+position = Vector2(224, 128)
+
 [node name="Teleporter" parent="Interactables" node_paths=PackedStringArray("buttons") instance=ExtResource("5_l6nv3")]
 position = Vector2(144, 64)
 buttons = [NodePath("../FloorButton")]
 
 [node name="FloorButton" parent="Interactables" instance=ExtResource("6_6spwa")]
 position = Vector2(176, 128)
-
-[node name="Box" parent="Interactables" instance=ExtResource("7_k6wti")]
-position = Vector2(176, 112)
-
-[node name="Box2" parent="Interactables" node_paths=PackedStringArray("collision_box") instance=ExtResource("7_k6wti")]
-position = Vector2(192, 128)
-collision_box = NodePath("../Box/CollisionShape2D")
-
-[node name="Box3" parent="Interactables" node_paths=PackedStringArray("collision_box") instance=ExtResource("7_k6wti")]
-position = Vector2(224, 128)
-collision_box = NodePath("../Box/CollisionShape2D")
-
-[node name="Box4" parent="Interactables" node_paths=PackedStringArray("collision_box") instance=ExtResource("7_k6wti")]
-position = Vector2(192, 96)
-collision_box = NodePath("../Box/CollisionShape2D")
-
-[node name="Box5" parent="Interactables" node_paths=PackedStringArray("collision_box") instance=ExtResource("7_k6wti")]
-position = Vector2(208, 96)
-collision_box = NodePath("../Box/CollisionShape2D")
-
-[node name="Box6" parent="Interactables" node_paths=PackedStringArray("collision_box") instance=ExtResource("7_k6wti")]
-position = Vector2(176, 80)
-collision_box = NodePath("../Box/CollisionShape2D")
-
-[node name="Box7" parent="Interactables" node_paths=PackedStringArray("collision_box") instance=ExtResource("7_k6wti")]
-position = Vector2(192, 80)
-collision_box = NodePath("../Box/CollisionShape2D")
-
-[node name="Box8" parent="Interactables" node_paths=PackedStringArray("collision_box") instance=ExtResource("7_k6wti")]
-position = Vector2(208, 64)
-collision_box = NodePath("../Box/CollisionShape2D")
-
-[node name="Box9" parent="Interactables" node_paths=PackedStringArray("collision_box") instance=ExtResource("7_k6wti")]
-position = Vector2(224, 96)
-collision_box = NodePath("../Box/CollisionShape2D")
-
-[node name="Box10" parent="Interactables" node_paths=PackedStringArray("collision_box") instance=ExtResource("7_k6wti")]
-position = Vector2(176, 64)
-collision_box = NodePath("../Box/CollisionShape2D")
 
 [node name="Floor" type="Node2D" parent="."]
 

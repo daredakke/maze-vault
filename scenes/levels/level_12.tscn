@@ -222,17 +222,17 @@ position = Vector2(272, 112)
 position = Vector2(160, 48)
 buttons = [NodePath("../FloorButton"), NodePath("../FloorButton2")]
 
-[node name="Box3" parent="Interactables" instance=ExtResource("7_3j8la")]
+[node name="Box" parent="Interactables" instance=ExtResource("7_3j8la")]
 position = Vector2(192, 64)
 
-[node name="Box5" parent="Interactables" instance=ExtResource("7_3j8la")]
-position = Vector2(64, 64)
-
-[node name="Box4" parent="Interactables" instance=ExtResource("7_3j8la")]
+[node name="Box2" parent="Interactables" instance=ExtResource("7_3j8la")]
 position = Vector2(176, 48)
 
-[node name="Box6" parent="Interactables" instance=ExtResource("7_3j8la")]
+[node name="Box3" parent="Interactables" instance=ExtResource("7_3j8la")]
 position = Vector2(112, 112)
+
+[node name="Box4" parent="Interactables" instance=ExtResource("7_3j8la")]
+position = Vector2(64, 64)
 
 [node name="Floor" type="Node2D" parent="."]
 

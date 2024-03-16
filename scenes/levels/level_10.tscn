@@ -290,35 +290,28 @@ position = Vector2(240, 112)
 position = Vector2(272, 64)
 
 [node name="Box" parent="Interactables" instance=ExtResource("7_h34ev")]
+position = Vector2(272, 80)
+
+[node name="Box2" parent="Interactables" instance=ExtResource("7_h34ev")]
+position = Vector2(48, 64)
+
+[node name="Box3" parent="Interactables" instance=ExtResource("7_h34ev")]
+position = Vector2(64, 80)
+
+[node name="Box4" parent="Interactables" instance=ExtResource("7_h34ev")]
+position = Vector2(48, 96)
+
+[node name="Box5" parent="Interactables" instance=ExtResource("7_h34ev")]
+position = Vector2(64, 112)
+
+[node name="Box6" parent="Interactables" instance=ExtResource("7_h34ev")]
 position = Vector2(80, 64)
 
-[node name="Box3" parent="Interactables" node_paths=PackedStringArray("collision_box") instance=ExtResource("7_h34ev")]
+[node name="Box7" parent="Interactables" instance=ExtResource("7_h34ev")]
 position = Vector2(80, 80)
-collision_box = NodePath("../Box/CollisionShape2D")
 
-[node name="Box5" parent="Interactables" node_paths=PackedStringArray("collision_box") instance=ExtResource("7_h34ev")]
-position = Vector2(64, 80)
-collision_box = NodePath("../Box/CollisionShape2D")
-
-[node name="Box7" parent="Interactables" node_paths=PackedStringArray("collision_box") instance=ExtResource("7_h34ev")]
-position = Vector2(48, 96)
-collision_box = NodePath("../Box/CollisionShape2D")
-
-[node name="Box6" parent="Interactables" node_paths=PackedStringArray("collision_box") instance=ExtResource("7_h34ev")]
-position = Vector2(48, 64)
-collision_box = NodePath("../Box/CollisionShape2D")
-
-[node name="Box4" parent="Interactables" node_paths=PackedStringArray("collision_box") instance=ExtResource("7_h34ev")]
+[node name="Box8" parent="Interactables" instance=ExtResource("7_h34ev")]
 position = Vector2(96, 96)
-collision_box = NodePath("../Box/CollisionShape2D")
-
-[node name="Box9" parent="Interactables" node_paths=PackedStringArray("collision_box") instance=ExtResource("7_h34ev")]
-position = Vector2(64, 112)
-collision_box = NodePath("../Box/CollisionShape2D")
-
-[node name="Box8" parent="Interactables" node_paths=PackedStringArray("collision_box") instance=ExtResource("7_h34ev")]
-position = Vector2(272, 80)
-collision_box = NodePath("../Box/CollisionShape2D")
 
 [node name="Floor" type="Node2D" parent="."]
 
