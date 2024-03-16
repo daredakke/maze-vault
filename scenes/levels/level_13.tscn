@@ -143,47 +143,26 @@ position = Vector2(160, 144)
 [node name="Robot" parent="Entities" instance=ExtResource("5_1rxwv")]
 position = Vector2(128, 112)
 
-[node name="Robot2" parent="Entities" node_paths=PackedStringArray("player_ray", "collision_box", "collision_ray") instance=ExtResource("5_1rxwv")]
-position = Vector2(128, 96)
-player_ray = NodePath("../Robot/PlayerRay")
-collision_box = NodePath("../Robot/CollisionShape2D")
-collision_ray = NodePath("../Robot/CollisionRay")
-
-[node name="Robot3" parent="Entities" node_paths=PackedStringArray("player_ray", "collision_box", "collision_ray") instance=ExtResource("5_1rxwv")]
-position = Vector2(128, 80)
-player_ray = NodePath("../Robot/PlayerRay")
-collision_box = NodePath("../Robot/CollisionShape2D")
-collision_ray = NodePath("../Robot/CollisionRay")
-
-[node name="Robot4" parent="Entities" node_paths=PackedStringArray("player_ray", "collision_box", "collision_ray") instance=ExtResource("5_1rxwv")]
-position = Vector2(192, 80)
-player_ray = NodePath("../Robot/PlayerRay")
-collision_box = NodePath("../Robot/CollisionShape2D")
-collision_ray = NodePath("../Robot/CollisionRay")
-
-[node name="Robot7" parent="Entities" node_paths=PackedStringArray("player_ray", "collision_box", "collision_ray") instance=ExtResource("5_1rxwv")]
-position = Vector2(128, 128)
-player_ray = NodePath("../Robot/PlayerRay")
-collision_box = NodePath("../Robot/CollisionShape2D")
-collision_ray = NodePath("../Robot/CollisionRay")
-
-[node name="Robot8" parent="Entities" node_paths=PackedStringArray("player_ray", "collision_box", "collision_ray") instance=ExtResource("5_1rxwv")]
-position = Vector2(192, 128)
-player_ray = NodePath("../Robot/PlayerRay")
-collision_box = NodePath("../Robot/CollisionShape2D")
-collision_ray = NodePath("../Robot/CollisionRay")
-
-[node name="Robot5" parent="Entities" node_paths=PackedStringArray("player_ray", "collision_box", "collision_ray") instance=ExtResource("5_1rxwv")]
-position = Vector2(192, 96)
-player_ray = NodePath("../Robot/PlayerRay")
-collision_box = NodePath("../Robot/CollisionShape2D")
-collision_ray = NodePath("../Robot/CollisionRay")
-
-[node name="Robot6" parent="Entities" node_paths=PackedStringArray("player_ray", "collision_box", "collision_ray") instance=ExtResource("5_1rxwv")]
+[node name="Robot2" parent="Entities" instance=ExtResource("5_1rxwv")]
 position = Vector2(192, 112)
-player_ray = NodePath("../Robot/PlayerRay")
-collision_box = NodePath("../Robot/CollisionShape2D")
-collision_ray = NodePath("../Robot/CollisionRay")
+
+[node name="Robot3" parent="Entities" instance=ExtResource("5_1rxwv")]
+position = Vector2(128, 96)
+
+[node name="Robot4" parent="Entities" instance=ExtResource("5_1rxwv")]
+position = Vector2(128, 80)
+
+[node name="Robot5" parent="Entities" instance=ExtResource("5_1rxwv")]
+position = Vector2(192, 96)
+
+[node name="Robot6" parent="Entities" instance=ExtResource("5_1rxwv")]
+position = Vector2(192, 80)
+
+[node name="Robot7" parent="Entities" instance=ExtResource("5_1rxwv")]
+position = Vector2(128, 128)
+
+[node name="Robot8" parent="Entities" instance=ExtResource("5_1rxwv")]
+position = Vector2(192, 128)
 
 [node name="Interactables" type="Node2D" parent="."]
 
@@ -203,3 +182,21 @@ position = Vector2(192, 48)
 
 [node name="Void4" parent="Floor" instance=ExtResource("6_emvdb")]
 position = Vector2(128, 48)
+
+[node name="Void17" parent="Floor" instance=ExtResource("6_emvdb")]
+position = Vector2(144, 64)
+
+[node name="Void18" parent="Floor" instance=ExtResource("6_emvdb")]
+position = Vector2(144, 48)
+
+[node name="Void19" parent="Floor" instance=ExtResource("6_emvdb")]
+position = Vector2(176, 64)
+
+[node name="Void21" parent="Floor" instance=ExtResource("6_emvdb")]
+position = Vector2(176, 144)
+
+[node name="Void22" parent="Floor" instance=ExtResource("6_emvdb")]
+position = Vector2(144, 144)
+
+[node name="Void20" parent="Floor" instance=ExtResource("6_emvdb")]
+position = Vector2(176, 48)

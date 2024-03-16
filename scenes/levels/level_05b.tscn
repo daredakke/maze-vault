@@ -20,6 +20,14 @@ metadata/_edit_lock_ = true
 
 [node name="BG" type="Node2D" parent="."]
 
+[node name="BlackBG" parent="BG" instance=ExtResource("8_q77x7")]
+position = Vector2(32, 88)
+scale = Vector2(4, 11)
+
+[node name="BlackBG2" parent="BG" instance=ExtResource("8_q77x7")]
+position = Vector2(288, 88)
+scale = Vector2(4, 11)
+
 [node name="Walls" type="Node2D" parent="."]
 
 [node name="Wall" parent="Walls" instance=ExtResource("2_86wi6")]
@@ -253,11 +261,3 @@ position = Vector2(176, 80)
 
 [node name="Void23" parent="Floor" instance=ExtResource("7_5h5gx")]
 position = Vector2(176, 96)
-
-[node name="BlackBG" parent="." instance=ExtResource("8_q77x7")]
-position = Vector2(32, 88)
-scale = Vector2(4, 11)
-
-[node name="BlackBG2" parent="." instance=ExtResource("8_q77x7")]
-position = Vector2(288, 88)
-scale = Vector2(4, 11)
