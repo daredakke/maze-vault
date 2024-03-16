@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://deihe75qro1u7"]
+[gd_scene load_steps=8 format=3 uid="uid://cnxnmpkptrhua"]
 
 [ext_resource type="Texture2D" uid="uid://q64fopn2ht18" path="res://assets/tiled-grid.png" id="1_ryuwt"]
 [ext_resource type="PackedScene" uid="uid://dhbty1ajjnn6n" path="res://scenes/black_bg.tscn" id="2_kmf5o"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://ciaf6xdrrx2v4" path="res://scenes/player.tscn" id="4_miidu"]
 [ext_resource type="PackedScene" uid="uid://c2uip3188o5lx" path="res://scenes/robot.tscn" id="5_1rxwv"]
 [ext_resource type="PackedScene" uid="uid://315w6n1us2nl" path="res://scenes/void.tscn" id="6_emvdb"]
+[ext_resource type="PackedScene" uid="uid://dsgyvvh2c1dar" path="res://scenes/computer.tscn" id="6_ft63v"]
 
 [node name="Level13" type="Node2D"]
 
@@ -161,13 +162,13 @@ collision_box = NodePath("../Robot/CollisionShape2D")
 collision_ray = NodePath("../Robot/CollisionRay")
 
 [node name="Robot7" parent="Entities" node_paths=PackedStringArray("player_ray", "collision_box", "collision_ray") instance=ExtResource("5_1rxwv")]
-position = Vector2(128, 64)
+position = Vector2(128, 128)
 player_ray = NodePath("../Robot/PlayerRay")
 collision_box = NodePath("../Robot/CollisionShape2D")
 collision_ray = NodePath("../Robot/CollisionRay")
 
 [node name="Robot8" parent="Entities" node_paths=PackedStringArray("player_ray", "collision_box", "collision_ray") instance=ExtResource("5_1rxwv")]
-position = Vector2(192, 64)
+position = Vector2(192, 128)
 player_ray = NodePath("../Robot/PlayerRay")
 collision_box = NodePath("../Robot/CollisionShape2D")
 collision_ray = NodePath("../Robot/CollisionRay")
@@ -186,13 +187,16 @@ collision_ray = NodePath("../Robot/CollisionRay")
 
 [node name="Interactables" type="Node2D" parent="."]
 
+[node name="Computer" parent="Interactables" instance=ExtResource("6_ft63v")]
+position = Vector2(160, 32)
+
 [node name="Floor" type="Node2D" parent="."]
 
 [node name="Void" parent="Floor" instance=ExtResource("6_emvdb")]
-position = Vector2(128, 128)
+position = Vector2(128, 64)
 
 [node name="Void2" parent="Floor" instance=ExtResource("6_emvdb")]
-position = Vector2(192, 128)
+position = Vector2(192, 64)
 
 [node name="Void3" parent="Floor" instance=ExtResource("6_emvdb")]
 position = Vector2(192, 48)
