@@ -96,7 +96,6 @@ visible = false
 unique_name_in_owner = true
 process_mode = 3
 visible = false
-bypass_splash = true
 
 [node name="Pixelation" type="CanvasLayer" parent="Camera"]
 unique_name_in_owner = true

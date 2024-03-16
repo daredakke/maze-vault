@@ -209,10 +209,10 @@ position = Vector2(304, 16)
 position = Vector2(48, 96)
 
 [node name="Robot" parent="Entities" instance=ExtResource("5_wcvty")]
-position = Vector2(32, 128)
+position = Vector2(32, 48)
 
 [node name="Robot2" parent="Entities" instance=ExtResource("5_wcvty")]
-position = Vector2(32, 48)
+position = Vector2(32, 128)
 
 [node name="Interactables" type="Node2D" parent="."]
 
@@ -295,113 +295,86 @@ position = Vector2(288, 80)
 [node name="Box46" parent="Interactables" instance=ExtResource("7_yqms3")]
 position = Vector2(112, 32)
 
-[node name="Box2" parent="Interactables" node_paths=PackedStringArray("collision_box") instance=ExtResource("7_yqms3")]
+[node name="Box2" parent="Interactables" instance=ExtResource("7_yqms3")]
 position = Vector2(160, 96)
-collision_box = NodePath("")
 
-[node name="Box39" parent="Interactables" node_paths=PackedStringArray("collision_box") instance=ExtResource("7_yqms3")]
+[node name="Box39" parent="Interactables" instance=ExtResource("7_yqms3")]
 position = Vector2(160, 32)
-collision_box = NodePath("")
 
-[node name="Box40" parent="Interactables" node_paths=PackedStringArray("collision_box") instance=ExtResource("7_yqms3")]
+[node name="Box40" parent="Interactables" instance=ExtResource("7_yqms3")]
 position = Vector2(144, 32)
-collision_box = NodePath("")
 
-[node name="Box42" parent="Interactables" node_paths=PackedStringArray("collision_box") instance=ExtResource("7_yqms3")]
+[node name="Box42" parent="Interactables" instance=ExtResource("7_yqms3")]
 position = Vector2(112, 64)
-collision_box = NodePath("")
 
-[node name="Box43" parent="Interactables" node_paths=PackedStringArray("collision_box") instance=ExtResource("7_yqms3")]
+[node name="Box43" parent="Interactables" instance=ExtResource("7_yqms3")]
 position = Vector2(208, 32)
-collision_box = NodePath("")
 
-[node name="Box4" parent="Interactables" node_paths=PackedStringArray("collision_box") instance=ExtResource("7_yqms3")]
+[node name="Box4" parent="Interactables" instance=ExtResource("7_yqms3")]
 position = Vector2(160, 80)
-collision_box = NodePath("")
 
-[node name="Box5" parent="Interactables" node_paths=PackedStringArray("collision_box") instance=ExtResource("7_yqms3")]
+[node name="Box5" parent="Interactables" instance=ExtResource("7_yqms3")]
 position = Vector2(128, 64)
-collision_box = NodePath("")
 
-[node name="Box6" parent="Interactables" node_paths=PackedStringArray("collision_box") instance=ExtResource("7_yqms3")]
+[node name="Box6" parent="Interactables" instance=ExtResource("7_yqms3")]
 position = Vector2(224, 64)
-collision_box = NodePath("")
 
-[node name="Box7" parent="Interactables" node_paths=PackedStringArray("collision_box") instance=ExtResource("7_yqms3")]
+[node name="Box7" parent="Interactables" instance=ExtResource("7_yqms3")]
 position = Vector2(240, 96)
-collision_box = NodePath("")
 
-[node name="Box47" parent="Interactables" node_paths=PackedStringArray("collision_box") instance=ExtResource("7_yqms3")]
+[node name="Box47" parent="Interactables" instance=ExtResource("7_yqms3")]
 position = Vector2(256, 112)
-collision_box = NodePath("")
 
-[node name="Box8" parent="Interactables" node_paths=PackedStringArray("collision_box") instance=ExtResource("7_yqms3")]
+[node name="Box8" parent="Interactables" instance=ExtResource("7_yqms3")]
 position = Vector2(224, 96)
-collision_box = NodePath("")
 
-[node name="Box9" parent="Interactables" node_paths=PackedStringArray("collision_box") instance=ExtResource("7_yqms3")]
+[node name="Box9" parent="Interactables" instance=ExtResource("7_yqms3")]
 position = Vector2(208, 128)
-collision_box = NodePath("")
 
-[node name="Box48" parent="Interactables" node_paths=PackedStringArray("collision_box") instance=ExtResource("7_yqms3")]
+[node name="Box48" parent="Interactables" instance=ExtResource("7_yqms3")]
 position = Vector2(240, 144)
-collision_box = NodePath("")
 
-[node name="Box11" parent="Interactables" node_paths=PackedStringArray("collision_box") instance=ExtResource("7_yqms3")]
+[node name="Box11" parent="Interactables" instance=ExtResource("7_yqms3")]
 position = Vector2(256, 144)
-collision_box = NodePath("")
 
-[node name="Box12" parent="Interactables" node_paths=PackedStringArray("collision_box") instance=ExtResource("7_yqms3")]
+[node name="Box12" parent="Interactables" instance=ExtResource("7_yqms3")]
 position = Vector2(288, 144)
-collision_box = NodePath("")
 
-[node name="Box13" parent="Interactables" node_paths=PackedStringArray("collision_box") instance=ExtResource("7_yqms3")]
+[node name="Box13" parent="Interactables" instance=ExtResource("7_yqms3")]
 position = Vector2(288, 112)
-collision_box = NodePath("")
 
-[node name="Box18" parent="Interactables" node_paths=PackedStringArray("collision_box") instance=ExtResource("7_yqms3")]
+[node name="Box18" parent="Interactables" instance=ExtResource("7_yqms3")]
 position = Vector2(224, 48)
-collision_box = NodePath("")
 
-[node name="Box19" parent="Interactables" node_paths=PackedStringArray("collision_box") instance=ExtResource("7_yqms3")]
+[node name="Box19" parent="Interactables" instance=ExtResource("7_yqms3")]
 position = Vector2(240, 32)
-collision_box = NodePath("")
 
-[node name="Box21" parent="Interactables" node_paths=PackedStringArray("collision_box") instance=ExtResource("7_yqms3")]
+[node name="Box21" parent="Interactables" instance=ExtResource("7_yqms3")]
 position = Vector2(272, 32)
-collision_box = NodePath("")
 
-[node name="Box24" parent="Interactables" node_paths=PackedStringArray("collision_box") instance=ExtResource("7_yqms3")]
+[node name="Box24" parent="Interactables" instance=ExtResource("7_yqms3")]
 position = Vector2(192, 32)
-collision_box = NodePath("")
 
-[node name="Box25" parent="Interactables" node_paths=PackedStringArray("collision_box") instance=ExtResource("7_yqms3")]
+[node name="Box25" parent="Interactables" instance=ExtResource("7_yqms3")]
 position = Vector2(128, 80)
-collision_box = NodePath("")
 
-[node name="Box26" parent="Interactables" node_paths=PackedStringArray("collision_box") instance=ExtResource("7_yqms3")]
+[node name="Box26" parent="Interactables" instance=ExtResource("7_yqms3")]
 position = Vector2(144, 64)
-collision_box = NodePath("")
 
-[node name="Box27" parent="Interactables" node_paths=PackedStringArray("collision_box") instance=ExtResource("7_yqms3")]
+[node name="Box27" parent="Interactables" instance=ExtResource("7_yqms3")]
 position = Vector2(128, 96)
-collision_box = NodePath("")
 
-[node name="Box31" parent="Interactables" node_paths=PackedStringArray("collision_box") instance=ExtResource("7_yqms3")]
+[node name="Box31" parent="Interactables" instance=ExtResource("7_yqms3")]
 position = Vector2(208, 144)
-collision_box = NodePath("")
 
-[node name="Box34" parent="Interactables" node_paths=PackedStringArray("collision_box") instance=ExtResource("7_yqms3")]
+[node name="Box34" parent="Interactables" instance=ExtResource("7_yqms3")]
 position = Vector2(112, 96)
-collision_box = NodePath("")
 
-[node name="Box35" parent="Interactables" node_paths=PackedStringArray("collision_box") instance=ExtResource("7_yqms3")]
+[node name="Box35" parent="Interactables" instance=ExtResource("7_yqms3")]
 position = Vector2(144, 80)
-collision_box = NodePath("")
 
-[node name="Box36" parent="Interactables" node_paths=PackedStringArray("collision_box") instance=ExtResource("7_yqms3")]
+[node name="Box36" parent="Interactables" instance=ExtResource("7_yqms3")]
 position = Vector2(208, 80)
-collision_box = NodePath("")
 
 [node name="Floor" type="Node2D" parent="."]
 
