@@ -10,10 +10,12 @@ config_version=5
 
 [application]
 
-config/name="maze-vault"
+config/name="nanoban"
+config/version="1.0.0.0"
 run/main_scene="res://scenes/game.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://assets/nanoban-icon-default.png"
+config/windows_native_icon="res://nanoban-icon.ico"
 
 [autoload]
 

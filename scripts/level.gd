@@ -42,7 +42,6 @@ const LEVEL_13: PackedScene = preload("res://scenes/levels/level_13.tscn")
 
 
 var _level_scenes: Array = [
-	LEVEL_13,
 	INTRO,
 	INTRO_CONTROLS,
 	INTRO_GOAL,
@@ -70,6 +69,7 @@ var _level_scenes: Array = [
 	LEVEL_10,
 	LEVEL_12,
 	LEVEL_11,
+	LEVEL_13,
 	END,
 	END_TWO,
 	END_THREE,
