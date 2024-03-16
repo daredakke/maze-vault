@@ -36,12 +36,11 @@ theme_override_constants/margin_bottom = 16
 [node name="BodyLabel" type="Label" parent="Margin"]
 layout_mode = 2
 theme_override_constants/line_spacing = -2
-text = "MAKE SURE YOU DON'T FORGET
-THE BASICS.
+text = "REMEMBER, ARROW KEYS TO MOVE.
+PRESS R IF YOU MESS UP.
 
-MOVE WITH THE ARROW KEYS AND
-PRESS ESCAPE IF YOU NEED TO 
-CHANGE ANY SETTINGS."
+PRESS ESCAPE TO CHANGE ANY 
+SETTINGS."
 
 [node name="ZLabel" type="Label" parent="Margin"]
 layout_mode = 2
