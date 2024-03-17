@@ -327,6 +327,7 @@ position = Vector2(256, 112)
 
 [node name="Box8" parent="Interactables" instance=ExtResource("7_yqms3")]
 position = Vector2(208, 96)
+scale = Vector2(1, 1.00514)
 
 [node name="Box9" parent="Interactables" instance=ExtResource("7_yqms3")]
 position = Vector2(208, 128)

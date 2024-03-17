@@ -13,6 +13,7 @@ func _enter_tree() -> void:
 
 func _ready() -> void:
 	splash.splash_ended.connect(pause.focus_main_menu)
+	splash.splash_ended.connect(audio_bus.play_game_music)
 	pause.game_started.connect(_start_game)
 	pause.game_continued.connect(_unpause_game)
 

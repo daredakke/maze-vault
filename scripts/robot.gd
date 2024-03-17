@@ -26,6 +26,8 @@ var _player_collision: bool = false
 func _ready() -> void:
 	super._ready()
 	
+	_can_move_boxes = false
+	
 	animation_player.play("down_1")
 	collision_with_obstacle.connect(_end_search)
 	EventBus.player_moved.connect(_delay_search)
@@ -117,6 +119,7 @@ func _look_for_player() -> void:
 				
 				if _player_collision:
 					_player_collision = false
+					_can_move_boxes = false
 					return
 				
 				animation_player.play(dir + "_1")
