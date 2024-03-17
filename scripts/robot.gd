@@ -17,6 +17,7 @@ var _collider = null
 var _moving_to_target: bool = false
 var _last_player_direction: Vector2
 var _anim_type: int = 1
+var _player_collision: bool = false
 
 @onready var search_delay: Timer = $SearchDelay
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
@@ -29,6 +30,7 @@ func _ready() -> void:
 	collision_with_obstacle.connect(_end_search)
 	EventBus.player_moved.connect(_delay_search)
 	EventBus.level_reset.connect(reset)
+	#EventBus.player_died.connect(reset)
 	search_delay.timeout.connect(_look_for_player)
 
 
@@ -55,9 +57,9 @@ func reset() -> void:
 	animation_player.play("down_1")
 	search_delay.stop()
 	_last_player_direction = Vector2.DOWN
-	_can_move_boxes = true
+	_can_move_boxes = false
 	is_controlled = false
-	_moving_to_target = false
+	_end_search()
 
 
 func destroy() -> void:
@@ -85,7 +87,6 @@ func _delay_search() -> void:
 
 func _end_search() -> void:
 	_moving_to_target = false
-	_can_move_boxes = true
 	_look_for_player()
 
 
@@ -113,9 +114,13 @@ func _look_for_player() -> void:
 			if _collider.is_in_group("player"):
 				_last_player_direction = directions[dir]
 				_move(_last_player_direction)
+				
+				if _player_collision:
+					_player_collision = false
+					return
+				
 				animation_player.play(dir + "_1")
 				_moving_to_target = true
-				_can_move_boxes = false
 				return
 
 
@@ -127,4 +132,5 @@ func _move(dir: Vector2) -> void:
 		
 		if not is_controlled and collider.is_in_group("player"):
 			collider.destroy()
+			_player_collision = true
 			EventBus.level_reset.emit()

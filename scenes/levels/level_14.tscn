@@ -177,10 +177,10 @@ position = Vector2(304, 80)
 position = Vector2(80, 144)
 
 [node name="Wall60" parent="Walls" instance=ExtResource("3_43ph1")]
-position = Vector2(80, 32)
+position = Vector2(96, 32)
 
 [node name="Wall61" parent="Walls" instance=ExtResource("3_43ph1")]
-position = Vector2(80, 64)
+position = Vector2(96, 64)
 
 [node name="Wall62" parent="Walls" instance=ExtResource("3_43ph1")]
 position = Vector2(80, 112)
@@ -189,7 +189,10 @@ position = Vector2(80, 112)
 position = Vector2(80, 96)
 
 [node name="Wall64" parent="Walls" instance=ExtResource("3_43ph1")]
-position = Vector2(80, 80)
+position = Vector2(96, 80)
+
+[node name="Wall65" parent="Walls" instance=ExtResource("3_43ph1")]
+position = Vector2(96, 96)
 
 [node name="Wall16" parent="Walls" instance=ExtResource("3_43ph1")]
 position = Vector2(304, 64)
@@ -206,13 +209,13 @@ position = Vector2(304, 16)
 [node name="Entities" type="Node2D" parent="."]
 
 [node name="Player" parent="Entities" instance=ExtResource("4_0lmit")]
-position = Vector2(48, 96)
+position = Vector2(64, 64)
 
 [node name="Robot" parent="Entities" instance=ExtResource("5_wcvty")]
-position = Vector2(32, 48)
+position = Vector2(32, 128)
 
 [node name="Robot2" parent="Entities" instance=ExtResource("5_wcvty")]
-position = Vector2(32, 128)
+position = Vector2(32, 48)
 
 [node name="Interactables" type="Node2D" parent="."]
 
@@ -231,9 +234,6 @@ position = Vector2(272, 128)
 
 [node name="FloorButton4" parent="Interactables" instance=ExtResource("7_563wy")]
 position = Vector2(288, 32)
-
-[node name="Box" parent="Interactables" instance=ExtResource("7_yqms3")]
-position = Vector2(176, 48)
 
 [node name="Box3" parent="Interactables" instance=ExtResource("7_yqms3")]
 position = Vector2(192, 48)
@@ -317,7 +317,7 @@ position = Vector2(160, 80)
 position = Vector2(128, 64)
 
 [node name="Box6" parent="Interactables" instance=ExtResource("7_yqms3")]
-position = Vector2(224, 64)
+position = Vector2(224, 48)
 
 [node name="Box7" parent="Interactables" instance=ExtResource("7_yqms3")]
 position = Vector2(240, 96)
@@ -326,7 +326,7 @@ position = Vector2(240, 96)
 position = Vector2(256, 112)
 
 [node name="Box8" parent="Interactables" instance=ExtResource("7_yqms3")]
-position = Vector2(224, 96)
+position = Vector2(208, 96)
 
 [node name="Box9" parent="Interactables" instance=ExtResource("7_yqms3")]
 position = Vector2(208, 128)
@@ -344,7 +344,7 @@ position = Vector2(288, 144)
 position = Vector2(288, 112)
 
 [node name="Box18" parent="Interactables" instance=ExtResource("7_yqms3")]
-position = Vector2(224, 48)
+position = Vector2(224, 32)
 
 [node name="Box19" parent="Interactables" instance=ExtResource("7_yqms3")]
 position = Vector2(240, 32)
@@ -376,18 +376,32 @@ position = Vector2(144, 80)
 [node name="Box36" parent="Interactables" instance=ExtResource("7_yqms3")]
 position = Vector2(208, 80)
 
-[node name="Floor" type="Node2D" parent="."]
+[node name="Box49" parent="Interactables" instance=ExtResource("7_yqms3")]
+position = Vector2(288, 96)
 
-[node name="Void2" parent="Floor" instance=ExtResource("8_y3n3e")]
-position = Vector2(96, 128)
-is_one_step_tile = true
+[node name="Floor" type="Node2D" parent="."]
 
 [node name="Void10" parent="Floor" instance=ExtResource("8_y3n3e")]
 position = Vector2(112, 128)
 is_one_step_tile = true
 
+[node name="Void25" parent="Floor" instance=ExtResource("8_y3n3e")]
+position = Vector2(176, 48)
+
 [node name="Void11" parent="Floor" instance=ExtResource("8_y3n3e")]
 position = Vector2(112, 112)
+is_one_step_tile = true
+
+[node name="Void26" parent="Floor" instance=ExtResource("8_y3n3e")]
+position = Vector2(96, 112)
+is_one_step_tile = true
+
+[node name="Void27" parent="Floor" instance=ExtResource("8_y3n3e")]
+position = Vector2(96, 128)
+is_one_step_tile = true
+
+[node name="Void28" parent="Floor" instance=ExtResource("8_y3n3e")]
+position = Vector2(96, 144)
 is_one_step_tile = true
 
 [node name="Void12" parent="Floor" instance=ExtResource("8_y3n3e")]
@@ -430,30 +444,8 @@ is_one_step_tile = true
 position = Vector2(240, 112)
 is_one_step_tile = true
 
-[node name="Void8" parent="Floor" instance=ExtResource("8_y3n3e")]
-position = Vector2(96, 144)
-
-[node name="Void3" parent="Floor" instance=ExtResource("8_y3n3e")]
-position = Vector2(96, 112)
-
-[node name="Void4" parent="Floor" instance=ExtResource("8_y3n3e")]
-position = Vector2(96, 96)
-
-[node name="Void5" parent="Floor" instance=ExtResource("8_y3n3e")]
-position = Vector2(96, 80)
-
-[node name="Void6" parent="Floor" instance=ExtResource("8_y3n3e")]
-position = Vector2(96, 48)
-is_one_step_tile = true
-
-[node name="Void9" parent="Floor" instance=ExtResource("8_y3n3e")]
-position = Vector2(96, 32)
-
-[node name="Void7" parent="Floor" instance=ExtResource("8_y3n3e")]
-position = Vector2(96, 64)
-
 [node name="Forcefield" parent="Floor" instance=ExtResource("9_r85en")]
 position = Vector2(80, 128)
 
 [node name="Forcefield2" parent="Floor" instance=ExtResource("9_r85en")]
-position = Vector2(80, 48)
+position = Vector2(96, 48)
