@@ -37,6 +37,10 @@ func play_game_music() -> void:
 	game_music.play()
 
 
+func stop_game_music() -> void:
+	game_music.stop()
+
+
 func play_menu_selected() -> void:
 	menu_select_sfx.play()
 

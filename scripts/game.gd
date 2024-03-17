@@ -16,6 +16,7 @@ func _ready() -> void:
 	splash.splash_ended.connect(audio_bus.play_game_music)
 	pause.game_started.connect(_start_game)
 	pause.game_continued.connect(_unpause_game)
+	EventBus.end_cutscene.connect(audio_bus.stop_game_music)
 
 	pause.load_settings()
 	_pause_game()
