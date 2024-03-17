@@ -34,7 +34,7 @@ This was my first time making a puzzle game as well as something grid-based, so 
 
 ## KNOWN ISSUES
 
-    Taking control of a robot in front of you will cause them to not move until there is at least one empty space in-between.
-    A similar thing happens if a box is in-between a controlled robot and the player.
-    Stepping on a teleporter the same time it is activated won't teleport you until you move on to it again.
-    Boxes don't break weak floor tiles. Or maybe this is a feature?
+- Taking control of a robot in front of you will cause them to not move until there is at least one empty space in-between.
+- A similar thing happens if a box is in-between a controlled robot and the player.
+- Stepping on a teleporter the same time it is activated won't teleport you until you move on to it again.
+- Boxes don't break weak floor tiles. Or maybe this is a feature?
